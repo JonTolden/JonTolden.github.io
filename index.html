@@ -6,19 +6,29 @@
   <title>Jon Tolden | Electrical Engineer</title>
   <style>
     :root {
-      --primary: #003366;
-      --secondary: #005580;
-      --accent: #007acc;
-      --light: #f4f4f4;
-      --dark: #1a1a1a;
+      --primary: #2e4d2f;     /* Forest Green */
+      --secondary: #1e3521;   /* Hunter Green */
+      --accent: #4caf50;      /* Army Green Accent */
+      --light-bg: #f4f4f4;
+      --light-text: #1a1a1a;
+      --dark-bg: #121d14;
+      --dark-text: #f4f4f4;
+      --card-bg-light: white;
+      --card-bg-dark: #223022;
     }
 
     body {
       font-family: "Segoe UI", sans-serif;
       margin: 0;
-      background-color: var(--light);
-      color: var(--dark);
+      background-color: var(--light-bg);
+      color: var(--light-text);
       line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark {
+      background-color: var(--dark-bg);
+      color: var(--dark-text);
     }
 
     header {
@@ -26,17 +36,6 @@
       color: white;
       padding: 3rem 1rem 2rem;
       text-align: center;
-    }
-
-    header h1 {
-      margin-bottom: 0.5rem;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: auto;
     }
 
     nav {
@@ -57,23 +56,43 @@
       color: var(--accent);
     }
 
+    #theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 999;
+    }
+
     section {
       padding: 3rem 5%;
       max-width: 1000px;
       margin: auto;
     }
 
-    .project, .about-box, .contact-box {
-      background-color: white;
+    .card {
+      background-color: var(--card-bg-light);
       padding: 1.5rem;
       margin-bottom: 2rem;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, background-color 0.3s;
+      opacity: 0;
+      transform: translateY(20px);
     }
 
-    .project:hover {
-      transform: translateY(-5px);
+    body.dark .card {
+      background-color: var(--card-bg-dark);
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     h2 {
@@ -81,8 +100,7 @@
       margin-bottom: 1rem;
     }
 
-    .project h3 {
-      margin-top: 0;
+    .card h3 {
       color: var(--secondary);
     }
 
@@ -98,7 +116,15 @@
     }
 
     a.button:hover {
-      background-color: #005fa3;
+      background-color: #388e3c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: var(--primary);
+      color: white;
+      font-size: 0.9rem;
     }
 
     .contact-box p a {
@@ -110,14 +136,6 @@
       text-decoration: underline;
     }
 
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background-color: var(--primary);
-      color: white;
-      font-size: 0.9rem;
-    }
-
     @media (max-width: 600px) {
       nav a {
         display: block;
@@ -127,6 +145,8 @@
   </style>
 </head>
 <body>
+
+<button id="theme-toggle">Toggle Dark Mode</button>
 
 <header>
   <h1>Jon Tolden</h1>
@@ -140,7 +160,7 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<section id="about" class="about-box">
+<section id="about" class="card">
   <h2>About Me</h2>
   <p>I’m a hands-on electrical engineer specializing in unmanned systems, high-voltage power electronics, and digital communications. With experience in UAV design, embedded hardware, and signal processing, I turn real-world engineering challenges into operational systems.</p>
 </section>
@@ -148,26 +168,24 @@
 <section id="projects">
   <h2>Projects</h2>
 
-  <div class="project">
+  <div class="card">
     <h3>Project Caladrius – Long-Endurance UAV</h3>
     <p>Led electrical integration for a Group 2 UAV platform with onboard RGB-D, EO/IR, LiDAR, and comms systems. Designed power distribution and signal routing for endurance and payload compatibility.</p>
   </div>
 
-  <div class="project">
+  <div class="card">
     <h3>400V VESC Redesign</h3>
     <p>Developed a custom ESC using SiC MOSFETs and digital isolation for high-performance axial flux EV motors. Handled schematic capture, PCB design in KiCAD, and system testing.</p>
   </div>
-
-  <!-- Add more project cards as needed -->
 </section>
 
-<section id="resume">
+<section id="resume" class="card">
   <h2>Resume</h2>
   <p>You can view or download my resume here:</p>
   <a href="your_resume_link.pdf" target="_blank" class="button">Download Resume (PDF)</a>
 </section>
 
-<section id="contact" class="contact-box">
+<section id="contact" class="card contact-box">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:jon.a.tolden@gmail.com">jon.a.tolden@gmail.com</a></p>
   <p>Phone: <a href="tel:+17142932180">(714) 293-2180</a></p>
@@ -177,6 +195,32 @@
 <footer>
   <p>© 2025 Jon Tolden | Thank you for visiting my page!</p>
 </footer>
+
+<script>
+  // Dark mode toggle
+  const toggle = document.getElementById("theme-toggle");
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+  });
+
+  // Persist theme
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+  }
+
+  // Scroll animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.card').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
