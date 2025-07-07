@@ -1,57 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jon Tolden | Electrical Engineer</title>
   <style>
+    :root {
+      --primary: #003366;
+      --secondary: #005580;
+      --accent: #007acc;
+      --light: #f4f4f4;
+      --dark: #1a1a1a;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", sans-serif;
       margin: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
     }
+
     header {
-      background-color: #003366;
+      background-color: var(--primary);
       color: white;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem 2rem;
       text-align: center;
     }
+
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
     nav {
-      background-color: #002244;
+      background-color: var(--secondary);
       text-align: center;
-      padding: 0.5rem;
+      padding: 0.75rem 0;
     }
+
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 1rem;
+      margin: 0 1.5rem;
       font-weight: bold;
+      transition: color 0.3s;
     }
+
     nav a:hover {
-      text-decoration: underline;
+      color: var(--accent);
     }
+
     section {
-      padding: 2rem 5%;
+      padding: 3rem 5%;
       max-width: 1000px;
       margin: auto;
     }
+
+    .project, .about-box, .contact-box {
+      background-color: white;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .project h3 {
+      margin-top: 0;
+      color: var(--secondary);
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    a.button:hover {
+      background-color: #005fa3;
+    }
+
+    .contact-box p a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-box p a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
-      padding: 1rem;
-      background-color: #003366;
+      padding: 1.5rem;
+      background-color: var(--primary);
       color: white;
-      margin-top: 2rem;
+      font-size: 0.9rem;
     }
-    .project {
-      background-color: white;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #003366;
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
@@ -69,7 +140,7 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<section id="about">
+<section id="about" class="about-box">
   <h2>About Me</h2>
   <p>I’m a hands-on electrical engineer specializing in unmanned systems, high-voltage power electronics, and digital communications. With experience in UAV design, embedded hardware, and signal processing, I turn real-world engineering challenges into operational systems.</p>
 </section>
@@ -87,21 +158,21 @@
     <p>Developed a custom ESC using SiC MOSFETs and digital isolation for high-performance axial flux EV motors. Handled schematic capture, PCB design in KiCAD, and system testing.</p>
   </div>
 
-  <!-- Add more projects here -->
+  <!-- Add more project cards as needed -->
 </section>
 
 <section id="resume">
   <h2>Resume</h2>
-  <p><a href="your_resume_link.pdf" target="_blank">Download my resume (PDF)</a></p>
+  <p>You can view or download my resume here:</p>
+  <a href="your_resume_link.pdf" target="_blank" class="button">Download Resume (PDF)</a>
 </section>
 
-<section id="contact">
+<section id="contact" class="contact-box">
   <h2>Contact</h2>
-  <p>Email: jon.a.tolden@gmail.com</p>
-  <p>Phone: (714) 293-2180</p>
+  <p>Email: <a href="mailto:jon.a.tolden@gmail.com">jon.a.tolden@gmail.com</a></p>
+  <p>Phone: <a href="tel:+17142932180">(714) 293-2180</a></p>
   <p>LinkedIn: <a href="https://linkedin.com/in/jontolden" target="_blank">linkedin.com/in/jontolden</a></p>
 </section>
-
 
 <footer>
   <p>© 2025 Jon Tolden | Thank you for visiting my page!</p>
