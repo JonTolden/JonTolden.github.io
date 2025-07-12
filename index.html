@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jon Tolden | Electrical Engineer</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     :root {
       --primary: #2e4d2f;
@@ -186,47 +187,28 @@
       }
     }
 
-.timeline {
-  position: relative;
-  margin: 2rem 0;
-  padding-left: 2rem;
-  border-left: 4px solid var(--primary);
-}
+    .timeline-item[data-aos] {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-out;
+    }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 2.5rem;
-  padding-left: 1rem;
-}
-
-.timeline-date {
-  font-weight: bold;
-  color: var(--accent);
-  margin-bottom: 0.5rem;
-}
-
-.timeline-content {
-  background-color: var(--card-bg-light);
-  padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.timeline-content img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 0.75rem;
-}
-
-body.dark .timeline-content {
-  background-color: var(--card-bg-dark);
-}
-
+    .aos-animate.timeline-item[data-aos] {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
   </style>
 </head>
 <body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({ duration: 1000, once: true });
+  });
+</script>
+
+
 
 <button id="theme-toggle">Toggle Dark Mode</button>
 
