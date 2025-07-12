@@ -6,15 +6,19 @@
   <title>Jon Tolden | Electrical Engineer</title>
   <style>
     :root {
-      --primary: #2e4d2f;     /* Forest Green */
-      --secondary: #1e3521;   /* Hunter Green */
-      --accent: #4caf50;      /* Army Green Accent */
+      --primary: #2e4d2f;
+      --secondary: #1e3521;
+      --accent: #4caf50;
       --light-bg: #f4f4f4;
       --light-text: #1a1a1a;
       --dark-bg: #121d14;
       --dark-text: #f4f4f4;
       --card-bg-light: white;
       --card-bg-dark: #223022;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -36,6 +40,23 @@
       color: white;
       padding: 3rem 1rem 2rem;
       text-align: center;
+    }
+
+    header h1, header p {
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeDrop 1s ease-out forwards;
+    }
+
+    header p {
+      animation-delay: 0.3s;
+    }
+
+    @keyframes fadeDrop {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     nav {
@@ -81,18 +102,18 @@
       margin-bottom: 2rem;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease, background-color 0.3s;
+      transition: opacity 0.6s ease, transform 0.6s ease;
       opacity: 0;
-      transform: translateY(20px);
-    }
-
-    body.dark .card {
-      background-color: var(--card-bg-dark);
+      transform: translateY(30px);
     }
 
     .card.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    body.dark .card {
+      background-color: var(--card-bg-dark);
     }
 
     h2 {
@@ -112,26 +133,33 @@
       color: white;
       text-decoration: none;
       border-radius: 5px;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, transform 0.2s ease-in-out;
     }
-    
-.collage {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 10px;
-  margin-top: 1.5rem;
-}
-
-.collage img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
 
     a.button:hover {
       background-color: #388e3c;
+      transform: scale(1.05);
+    }
+
+    .collage {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 1.5rem;
+    }
+
+    .collage img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
+    }
+
+    .collage img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
     }
 
     footer {
@@ -165,7 +193,7 @@
 
 <header>
   <h1>Jon Tolden</h1>
-<img src="Tolden_Headshot_2.jpg" alt="" style="width:120px;border-radius:50%;margin-top:1rem;" />
+  <img src="Tolden_Headshot_2.jpg" alt="" style="width:120px;border-radius:50%;margin-top:1rem;" />
   <p>Veteran | Electrical Engineer | UAS Professional | EV Motor Designer | High Efficiency Energy Solutions</p>
 </header>
 
@@ -183,24 +211,20 @@
 
 <section id="mystory" class="card">
   <h2>My Story</h2>
-  <p>
-    My journey began in the military, where I served as an MQ-1C Gray Eagle operator. I wasn’t just flying drones; I was part of a team where mission success depended on trust, timing, and technology working in harmony. During that time, I worked alongside engineers who spoke the language of circuits and systems. I found myself wanting to understand the "why" behind the machines we relied on.
-  </p>
-<div class="collage">
-  <img src="My_Story_1.jpg" loading="lazy" />
-  <img src="My_Story_2.jpg" loading="lazy" />
-  <img src="My_Story_3.jpg" loading="lazy" />
-  <img src="My_Story_4.jpg" loading="lazy" />
-  <img src="My_Story_5.jpg" loading="lazy" />
-  <img src="My_Story_6.jpg" loading="lazy" />
-</div>
+  <p>My journey began in the military, where I served as an MQ-1C Gray Eagle operator. I wasn’t just flying drones; I was part of a team where mission success depended on trust, timing, and technology working in harmony. During that time, I worked alongside engineers who spoke the language of circuits and systems. I found myself wanting to understand the "why" behind the machines we relied on.</p>
+  
+  <div class="collage">
+    <img src="My_Story_1.jpg" loading="lazy" />
+    <img src="My_Story_2.jpg" loading="lazy" />
+    <img src="My_Story_3.jpg" loading="lazy" />
+    <img src="My_Story_4.jpg" loading="lazy" />
+    <img src="My_Story_5.jpg" loading="lazy" />
+    <img src="My_Story_6.jpg" loading="lazy" />
+  </div>
 
-  <p>
-    Leaving the military and stepping into engineering school was a challenge. I went from deployment zones to classrooms, trading a uniform for textbooks and lab equipment. It was unfamiliar territory, but every circuit I wired and every system I modeled gave me a stronger sense of direction. Engineering became more than a career choice. It became a way to grow, to solve meaningful problems, and to continue serving—just in a different way.
-  </p>
-  <p>
-    Today, I approach every project with the same mindset I carried in the military: be precise, stay reliable, and keep improving. Whether I am working on UAV power systems, embedded controls, or high-voltage electric vehicle motors, I carry a deep respect for the impact engineering can make in the real world. My mission now is to build things that work when it matters most.
-  </p>
+  <p>Leaving the military and stepping into engineering school was a challenge. I went from deployment zones to classrooms, trading a uniform for textbooks and lab equipment. It was unfamiliar territory, but every circuit I wired and every system I modeled gave me a stronger sense of direction. Engineering became more than a career choice. It became a way to grow, to solve meaningful problems, and to continue serving—just in a different way.</p>
+
+  <p>Today, I approach every project with the same mindset I carried in the military: be precise, stay reliable, and keep improving. Whether I am working on UAV power systems, embedded controls, or high-voltage electric vehicle motors, I carry a deep respect for the impact engineering can make in the real world. My mission now is to build things that work when it matters most.</p>
 </section>
 
 <section id="projects">
@@ -251,21 +275,17 @@
 
   // Scroll animation
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, index * 150);
         observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.card').forEach(el => observer.observe(el));
-
-    function toggleResume() {
-    const viewer = document.getElementById("resumeViewer");
-    viewer.style.display = (viewer.style.display === "none") ? "block" : "none";
-  }
-
 </script>
 
 </body>
