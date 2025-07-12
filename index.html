@@ -197,6 +197,93 @@
       opacity: 1 !important;
       transform: translateY(0) !important;
     }
+
+.timeline-v2 {
+  position: relative;
+  margin: 4rem 0;
+  padding: 2rem 0;
+}
+
+.timeline-v2::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: var(--primary);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-v2-item {
+  padding: 1rem 2rem;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timeline-v2-item .content {
+  background-color: var(--card-bg-light);
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.timeline-v2-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.timeline-v2-item .text-block {
+  flex: 1;
+}
+
+.timeline-v2-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-v2-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-v2-item.left .content {
+  flex-direction: row-reverse;
+}
+
+body.dark .timeline-v2-item .content {
+  background-color: var(--card-bg-dark);
+}
+
+@media (max-width: 768px) {
+  .timeline-v2::after {
+    left: 8px;
+  }
+
+  .timeline-v2-item {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 0;
+  }
+
+  .timeline-v2-item.left,
+  .timeline-v2-item.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline-v2-item.left .content,
+  .timeline-v2-item.right .content {
+    flex-direction: row;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -248,52 +335,62 @@
   <p>Today, I approach every project with the same mindset I carried in the military: be precise, stay reliable, and keep improving. Whether I am working on UAV power systems, embedded controls, or high-voltage electric vehicle motors, I carry a deep respect for the impact engineering can make in the real world. My mission now is to build things that work when it matters most.</p>
 </section>
 
-<section id="timeline" class="card">
+<section id="timeline-graphic" class="card">
   <h2>Timeline</h2>
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <div class="timeline-date">2012</div>
-      <div class="timeline-content">
-        <img src="assets/images/timeline_2012.jpg" alt="Military UAV Operator">
-        <h3>Army UAV Operator</h3>
-        <p>Operated MQ-1C Gray Eagle drones in real-world ISR missions. Collaborated with engineers, sparking my passion for systems and signal processing.</p>
+  <div class="timeline-v2">
+    
+    <div class="timeline-v2-item left" data-aos="fade-right">
+      <div class="content">
+        <img src="assets/images/timeline_2012.jpg" alt="2012">
+        <div class="text-block">
+          <h3>2012</h3>
+          <h4>Army UAV Operator</h4>
+          <p>Operated MQ-1C Gray Eagle drones. Sparked passion for systems & RF engineering.</p>
+        </div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-date">2018</div>
-      <div class="timeline-content">
-        <img src="assets/images/timeline_2018.jpg" alt="Financial Auditor">
-        <h3>Financial Auditor – Ramada Inn</h3>
-        <p>Developed analytical rigor and attention to detail in a hotel finance environment. Built a foundation in leadership, compliance, and reporting.</p>
+    <div class="timeline-v2-item right" data-aos="fade-left">
+      <div class="content">
+        <img src="assets/images/timeline_2018.jpg" alt="2018">
+        <div class="text-block">
+          <h3>2018</h3>
+          <h4>Financial Auditor</h4>
+          <p>Built analytical rigor & leadership while auditing for a major hotel chain.</p>
+        </div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-date">2021</div>
-      <div class="timeline-content">
-        <img src="assets/images/timeline_2021.jpg" alt="Penhall Technologies">
-        <h3>GPR Analyst – Penhall Technologies</h3>
-        <p>Conducted subsurface imaging and nondestructive testing. Worked with RF-based equipment and honed my ability to interpret complex field data.</p>
+    <div class="timeline-v2-item left" data-aos="fade-right">
+      <div class="content">
+        <img src="assets/images/timeline_2021.jpg" alt="2021">
+        <div class="text-block">
+          <h3>2021</h3>
+          <h4>GPR Analyst</h4>
+          <p>Performed non-destructive testing and radar data analysis for Penhall Technologies.</p>
+        </div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-date">2023</div>
-      <div class="timeline-content">
-        <img src="assets/images/timeline_2023.jpg" alt="Startup Engineer">
-        <h3>Startup Engineer</h3>
-        <p>Founded two startups: American Tenet (UAS) and FluxSpeed (EV motors). Designed ESCs, led engineering teams, and built real-world prototypes.</p>
+    <div class="timeline-v2-item right" data-aos="fade-left">
+      <div class="content">
+        <img src="assets/images/timeline_2023.jpg" alt="2023">
+        <div class="text-block">
+          <h3>2023</h3>
+          <h4>Startup Engineer</h4>
+          <p>Founded American Tenet & FluxSpeed. Designed UAV & EV power/control systems.</p>
+        </div>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-date">2025</div>
-      <div class="timeline-content">
-        <img src="assets/images/timeline_2025.jpg" alt="CSULB EE Student">
-        <h3>EE Student at CSULB</h3>
-        <p>Focused on embedded systems, RF comms, and power electronics. Participating in SharkSat and high-altitude UAS development.</p>
+    <div class="timeline-v2-item left" data-aos="fade-right">
+      <div class="content">
+        <img src="assets/images/timeline_2025.jpg" alt="2025">
+        <div class="text-block">
+          <h3>2025</h3>
+          <h4>CSULB EE Student</h4>
+          <p>Specializing in embedded, RF, and power electronics. Building real-world aerospace projects.</p>
+        </div>
       </div>
     </div>
 
@@ -304,12 +401,12 @@
   <h2>Projects</h2>
 
   <div class="card">
-    <h3>Project Caladrius – Long-Endurance UAV</h3>
+    <h3>The Caladrius Project</h3>
     <p>Led electrical integration for a Group 2 UAV platform with onboard RGB-D, EO/IR, LiDAR, and comms systems. Designed power distribution and signal routing for endurance and payload compatibility.</p>
   </div>
 
   <div class="card">
-    <h3>400V VESC Redesign</h3>
+    <h3>Multi Rotor Axial Flux Motor</h3>
     <p>Developed a custom ESC using SiC MOSFETs and digital isolation for high-performance axial flux EV motors. Handled schematic capture, PCB design in KiCAD, and system testing.</p>
   </div>
 </section>
