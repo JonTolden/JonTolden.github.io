@@ -185,6 +185,45 @@
         margin: 0.5rem 0;
       }
     }
+
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+  border-left: 4px solid var(--primary);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 1rem;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content {
+  background-color: var(--card-bg-light);
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.timeline-content img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+body.dark .timeline-content {
+  background-color: var(--card-bg-dark);
+}
+
   </style>
 </head>
 <body>
@@ -225,6 +264,58 @@
   <p>Leaving the military and stepping into engineering school was a challenge. I went from deployment zones to classrooms, trading a uniform for textbooks and lab equipment. It was unfamiliar territory, but every circuit I wired and every system I modeled gave me a stronger sense of direction. Engineering became more than a career choice. It became a way to grow, to solve meaningful problems, and to continue serving—just in a different way.</p>
 
   <p>Today, I approach every project with the same mindset I carried in the military: be precise, stay reliable, and keep improving. Whether I am working on UAV power systems, embedded controls, or high-voltage electric vehicle motors, I carry a deep respect for the impact engineering can make in the real world. My mission now is to build things that work when it matters most.</p>
+</section>
+
+<section id="timeline" class="card">
+  <h2>Timeline</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-date">2012</div>
+      <div class="timeline-content">
+        <img src="assets/images/timeline_2012.jpg" alt="Military UAV Operator">
+        <h3>Army UAV Operator</h3>
+        <p>Operated MQ-1C Gray Eagle drones in real-world ISR missions. Collaborated with engineers, sparking my passion for systems and signal processing.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2018</div>
+      <div class="timeline-content">
+        <img src="assets/images/timeline_2018.jpg" alt="Financial Auditor">
+        <h3>Financial Auditor – Ramada Inn</h3>
+        <p>Developed analytical rigor and attention to detail in a hotel finance environment. Built a foundation in leadership, compliance, and reporting.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2021</div>
+      <div class="timeline-content">
+        <img src="assets/images/timeline_2021.jpg" alt="Penhall Technologies">
+        <h3>GPR Analyst – Penhall Technologies</h3>
+        <p>Conducted subsurface imaging and nondestructive testing. Worked with RF-based equipment and honed my ability to interpret complex field data.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2023</div>
+      <div class="timeline-content">
+        <img src="assets/images/timeline_2023.jpg" alt="Startup Engineer">
+        <h3>Startup Engineer</h3>
+        <p>Founded two startups: American Tenet (UAS) and FluxSpeed (EV motors). Designed ESCs, led engineering teams, and built real-world prototypes.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2025</div>
+      <div class="timeline-content">
+        <img src="assets/images/timeline_2025.jpg" alt="CSULB EE Student">
+        <h3>EE Student at CSULB</h3>
+        <p>Focused on embedded systems, RF comms, and power electronics. Participating in SharkSat and high-altitude UAS development.</p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <section id="projects">
@@ -286,7 +377,9 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.card').forEach(el => observer.observe(el));
+
 </script>
 
 </body>
+
 </html>
