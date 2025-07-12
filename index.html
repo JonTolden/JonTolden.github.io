@@ -185,106 +185,108 @@
         margin: 0.5rem 0;
       }
     }
-
-    .timeline {
-      position: relative;
-      padding-top: 2rem;
-    }
-
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 4px;
-      background-color: #2e4d2f;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -2px;
-    }
-
-    .timeline-item {
-      position: relative;
-      width: 50%;
-      padding: 1.5rem 0;
-    }
-
-    .timeline-item:nth-child(odd) {
-      left: 0;
-    }
-
-    .timeline-item:nth-child(even) {
-      left: 50%;
-    }
-
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      top: 15px;
-      right: -8px;
-      width: 16px;
-      height: 16px;
-      background-color: #4caf50;
-      border-radius: 50%;
-      z-index: 1;
-    }
-
-    .timeline-date {
-      position: absolute;
-      width: 100px;
-      text-align: center;
-      font-weight: bold;
-      top: 0;
-      font-size: 1.2rem;
-      color: #1e3521;
-    }
-
-    .timeline-item:nth-child(odd) .timeline-date {
-      left: 100%;
-      margin-left: 20px;
-    }
-
-    .timeline-item:nth-child(even) .timeline-date {
-      right: 100%;
-      margin-right: 20px;
-    }
-
-    .timeline-content {
-      padding: 1rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .timeline-content img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    .timeline-content .text {
-      color: #1a1a1a;
-    }
-
-    @media screen and (max-width: 768px) {
-      .timeline::after { left: 8px; }
-      .timeline-item { width: 100%; padding-left: 30px; }
-      .timeline-item:nth-child(even), .timeline-item:nth-child(odd) { left: 0; }
-      .timeline-item .timeline-date { position: relative; left: 0; margin: 0 0 10px; }
-    }
   </style>
 </head>
 <body>
 
-<section id="about-timeline">
-  <h2 style="text-align:center;color:#2e4d2f;">My Journey</h2>
-  <div class="timeline">
-    <div class="timeline-item"><div class="timeline-date">2012</div><div class="timeline-content"><img src="assets/images/military.jpg"><div class="text"><h3>Army UAV Operator</h3><p>Operated MQ-1C systems, managed ISR missions, and collaborated with engineers — sparking my interest in electrical engineering.</p></div></div></div>
-    <div class="timeline-item"><div class="timeline-date">2018</div><div class="timeline-content"><img src="assets/images/audit.jpg"><div class="text"><h3>Financial Auditor – Ramada Inn</h3><p>Gained business acumen, led compliance and finance reviews — foundations that support my project management approach today.</p></div></div></div>
-    <div class="timeline-item"><div class="timeline-date">2021</div><div class="timeline-content"><img src="assets/images/penhall.jpg"><div class="text"><h3>GPR Analyst – Penhall Technologies</h3><p>Performed subsurface imaging using radar & radiography. Developed deep understanding of sensor systems and signal processing.</p></div></div></div>
-    <div class="timeline-item"><div class="timeline-date">2023</div><div class="timeline-content"><img src="assets/images/startup.jpg"><div class="text"><h3>Startup Engineer</h3><p>Launched two companies: <strong>American Tenet</strong> (UAS) and <strong>FluxSpeed</strong> (Axial Flux Motors). Working on high-voltage ESCs, ML soaring, and real-world embedded systems.</p></div></div></div>
-    <div class="timeline-item"><div class="timeline-date">Today</div><div class="timeline-content"><img src="assets/images/csulb.jpg"><div class="text"><h3>Electrical Engineering Student @ CSULB</h3><p>Building communication systems, avionics, and embedded tech. Leading in labs and startups — preparing for a future in aerospace systems.</p></div></div></div>
+<button id="theme-toggle">Toggle Dark Mode</button>
+
+<header>
+  <h1>Jon Tolden</h1>
+  <img src="Tolden_Headshot_2.jpg" alt="" style="width:120px;border-radius:50%;margin-top:1rem;" />
+  <p>Veteran | Electrical Engineer | UAS Professional | EV Motor Designer | High Efficiency Energy Solutions</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#resume">Resume</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="card">
+  <h2>About</h2>
+  <p>This site is my personal and professional space to reflect on where I’ve been, what I’ve built, and where I’m going. From military operations to UAV power systems, it's a place to share the projects that matter to me and the skills I’ve developed along the way. It’s also a way to connect with others who are passionate about solving complex problems with elegant engineering.</p>
+</section>
+
+<section id="mystory" class="card">
+  <h2>My Story</h2>
+  <p>My journey began in the military, where I served as an MQ-1C Gray Eagle operator. I wasn’t just flying drones; I was part of a team where mission success depended on trust, timing, and technology working in harmony. During that time, I worked alongside engineers who spoke the language of circuits and systems. I found myself wanting to understand the "why" behind the machines we relied on.</p>
+  
+  <div class="collage">
+    <img src="My_Story_1.jpg" loading="lazy" />
+    <img src="My_Story_2.jpg" loading="lazy" />
+    <img src="My_Story_3.jpg" loading="lazy" />
+    <img src="My_Story_4.jpg" loading="lazy" />
+    <img src="My_Story_5.jpg" loading="lazy" />
+    <img src="My_Story_6.jpg" loading="lazy" />
+  </div>
+
+  <p>Leaving the military and stepping into engineering school was a challenge. I went from deployment zones to classrooms, trading a uniform for textbooks and lab equipment. It was unfamiliar territory, but every circuit I wired and every system I modeled gave me a stronger sense of direction. Engineering became more than a career choice. It became a way to grow, to solve meaningful problems, and to continue serving—just in a different way.</p>
+
+  <p>Today, I approach every project with the same mindset I carried in the military: be precise, stay reliable, and keep improving. Whether I am working on UAV power systems, embedded controls, or high-voltage electric vehicle motors, I carry a deep respect for the impact engineering can make in the real world. My mission now is to build things that work when it matters most.</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Project Caladrius – Long-Endurance UAV</h3>
+    <p>Led electrical integration for a Group 2 UAV platform with onboard RGB-D, EO/IR, LiDAR, and comms systems. Designed power distribution and signal routing for endurance and payload compatibility.</p>
+  </div>
+
+  <div class="card">
+    <h3>400V VESC Redesign</h3>
+    <p>Developed a custom ESC using SiC MOSFETs and digital isolation for high-performance axial flux EV motors. Handled schematic capture, PCB design in KiCAD, and system testing.</p>
   </div>
 </section>
+
+<section id="resume" class="card">
+  <h2>Resume</h2>
+  <p>You can view or download my resume here:</p>
+  <a href="Resume_July2025.pdf" target="_blank" class="button">Download Resume (PDF)</a>
+  <br><br>
+  <iframe src="Resume_July2025.pdf" width="100%" height="600px" style="border:none;"></iframe>
+</section>
+
+<section id="contact" class="card contact-box">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:jon.a.tolden@gmail.com">jon.a.tolden@gmail.com</a></p>
+  <p>Phone: <a href="tel:+17142932180">(714) 293-2180</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/jontolden" target="_blank">linkedin.com/in/jontolden</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Jon Tolden | Thank you for visiting my page!</p>
+</footer>
+
+<script>
+  // Dark mode toggle
+  const toggle = document.getElementById("theme-toggle");
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+  });
+
+  // Persist theme
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+  }
+
+  // Scroll animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, index * 150);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.card').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
