@@ -292,54 +292,6 @@ body.dark .timeline-v2-item .content {
   transform: scale(1.2);
   opacity: 1;
 }
-
-    #typewriter::after {
-  content: '|';
-  animation: blink 1s infinite;
-  margin-left: 5px;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-
-    <script>
-  const phrases = [
-    "Veteran | Electrical Engineer | UAS Professional",
-    "EV Motor Designer | RF & Embedded Systems Specialist",
-    "High Efficiency Energy Solutions"
-  ];
-
-  const typewriter = document.getElementById("typewriter");
-  let phraseIndex = 0;
-  let letterIndex = 0;
-  let isDeleting = false;
-
-  function type() {
-    const currentPhrase = phrases[phraseIndex];
-    const displayedText = currentPhrase.substring(0, letterIndex);
-    typewriter.textContent = displayedText;
-
-    if (!isDeleting && letterIndex < currentPhrase.length) {
-      letterIndex++;
-      setTimeout(type, 80);
-    } else if (isDeleting && letterIndex > 0) {
-      letterIndex--;
-      setTimeout(type, 40);
-    } else {
-      isDeleting = !isDeleting;
-      if (!isDeleting) phraseIndex = (phraseIndex + 1) % phrases.length;
-      setTimeout(type, 1000);
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    type();
-  });
-</script>
-
     
   </style>
 </head>
@@ -365,9 +317,10 @@ body.dark .timeline-v2-item .content {
     data-aos="zoom-in"
     data-aos-delay="300"
   />
-  <p id="typewriter" data-aos="fade-up" data-aos-delay="500"></p>
+  <p data-aos="fade-up" data-aos-delay="500">
+    Veteran | Electrical Engineer | UAS Professional | EV Motor Designer | High Efficiency Energy Solutions
+  </p>
 </header>
-
 
 
 <nav>
