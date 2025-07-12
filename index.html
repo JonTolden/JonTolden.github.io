@@ -1,505 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Jon Tolden | Electrical Engineer</title>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #2e4d2f;
-      --secondary: #1e3521;
-      --accent: #4caf50;
-      --light-bg: #f4f4f4;
-      --light-text: #1a1a1a;
-      --dark-bg: #121d14;
-      --dark-text: #f4f4f4;
-      --card-bg-light: white;
-      --card-bg-dark: #223022;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "Segoe UI", sans-serif;
-      margin: 0;
-      background-color: var(--light-bg);
-      color: var(--light-text);
-      line-height: 1.6;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    body.dark {
-      background-color: var(--dark-bg);
-      color: var(--dark-text);
-    }
-
-    header {
-      background-color: var(--primary);
-      color: white;
-      padding: 3rem 1rem 2rem;
-      text-align: center;
-    }
-
-    header h1, header p {
-      opacity: 0;
-      transform: translateY(-20px);
-      animation: fadeDrop 1s ease-out forwards;
-    }
-
-    header p {
-      animation-delay: 0.3s;
-    }
-
-    @keyframes fadeDrop {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    nav {
-      background-color: var(--secondary);
-      text-align: center;
-      padding: 0.75rem 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1.5rem;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    #theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background-color: var(--accent);
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-      z-index: 999;
-    }
-
-    section {
-      padding: 3rem 5%;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .card {
-      background-color: var(--card-bg-light);
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    .card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    body.dark .card {
-      background-color: var(--card-bg-dark);
-    }
-
-    h2 {
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-
-    .card h3 {
-      color: var(--secondary);
-    }
-
-    a.button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
-      background-color: var(--accent);
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s, transform 0.2s ease-in-out;
-    }
-
-    a.button:hover {
-      background-color: #388e3c;
-      transform: scale(1.05);
-    }
-
-    .collage {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 10px;
-      margin-top: 1.5rem;
-    }
-
-    .collage img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      object-fit: cover;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      transition: transform 0.4s ease, box-shadow 0.3s ease;
-    }
-
-    .collage img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background-color: var(--primary);
-      color: white;
-      font-size: 0.9rem;
-    }
-
-    .contact-box p a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .contact-box p a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
-    }
-
-    .timeline-item[data-aos] {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.6s ease-out;
-    }
-
-    .aos-animate.timeline-item[data-aos] {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-    }
-
-.timeline-v2 {
-  position: relative;
-  margin: 4rem 0;
-  padding: 2rem 0;
-}
-
-.timeline-v2::after {
-  content: '';
-  position: absolute;
-  width: 4px;
-  background-color: var(--primary);
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -2px;
-}
-
-.timeline-v2-item {
-  padding: 1rem 2rem;
-  position: relative;
-  width: 50%;
-  box-sizing: border-box;
-}
-
-.timeline-v2-item .content {
-  background-color: var(--card-bg-light);
-  padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.timeline-v2-item img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.timeline-v2-item .text-block {
-  flex: 1;
-}
-
-.timeline-v2-item.left {
-  left: 0;
-  text-align: right;
-}
-
-.timeline-v2-item.right {
-  left: 50%;
-  text-align: left;
-}
-
-.timeline-v2-item.left .content {
-  flex-direction: row-reverse;
-}
-
-body.dark .timeline-v2-item .content {
-  background-color: var(--card-bg-dark);
-}
-
-@media (max-width: 768px) {
-  .timeline-v2::after {
-    left: 8px;
-  }
-
-  .timeline-v2-item {
-    width: 100%;
-    padding-left: 2rem;
-    padding-right: 0;
-  }
-
-  .timeline-v2-item.left,
-  .timeline-v2-item.right {
-    left: 0;
-    text-align: left;
-  }
-
-  .timeline-v2-item.left .content,
-  .timeline-v2-item.right .content {
-    flex-direction: row;
-  }
-}
-
-.contact-box a img {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.8;
-}
-.contact-box a img:hover {
-  transform: scale(1.2);
-  opacity: 1;
-}
-    
-  </style>
 </head>
 <body>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    AOS.init({ duration: 1000, once: true });
-  });
-</script>
-
-
-
-<button id="theme-toggle">Toggle Dark Mode</button>
-
-<header data-aos="fade-down" data-aos-duration="1200">
-  <h1 data-aos="fade-down" data-aos-delay="100">Jon Tolden</h1>
-  <img
-    src="Tolden_Headshot_2.jpg"
-    alt="Jon Tolden Headshot"
-    style="width:120px;border-radius:50%;margin-top:1rem;"
-    data-aos="zoom-in"
-    data-aos-delay="300"
-  />
-  <p data-aos="fade-up" data-aos-delay="500">
-    Veteran | Electrical Engineer | UAS Professional | EV Motor Designer | High Efficiency Energy Solutions
-  </p>
-</header>
-
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#resume">Resume</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section id="about" class="card">
+  Toggle Dark Mode
+  <h1>Jon Tolden</h1><img src="Tolden_Headshot_2.jpg" alt="Jon Tolden Headshot">
+  <p>Veteran | Electrical Engineer | UAS Professional | EV Motor Designer | High Efficiency Energy Solutions</p><a href="#about">About</a> <a href="#projects">Projects</a> <a href="#resume">Resume</a> <a href="#contact">Contact</a>
   <h2>About</h2>
-  <p>This site is my personal and professional space to reflect on where I’ve been, what I’ve built, and where I’m going. From military operations to UAV power systems, it's a place to share the projects that matter to me and the skills I’ve developed along the way. It’s also a way to connect with others who are passionate about solving complex problems with elegant engineering.</p>
-</section>
-
-<section id="mystory" class="card">
+  <p>This site is my personal and professional space to reflect on where I've been, what I've built, and where I'm going. From military operations to UAV power systems, it's a place to share the projects that matter to me and the skills I've developed along the way. It's also a way to connect with others who are passionate about solving complex problems with elegant engineering.</p>
   <h2>My Story</h2>
-  <p>My journey began in the military, where I served as an MQ-1C Gray Eagle operator. I wasn’t just flying drones; I was part of a team where mission success depended on trust, timing, and technology working in harmony. During that time, I worked alongside engineers who spoke the language of circuits and systems. I found myself wanting to understand the "why" behind the machines we relied on.</p>
-  
-  <div class="collage">
-    <img src="My_Story_1.jpg" loading="lazy" />
-    <img src="My_Story_2.jpg" loading="lazy" />
-    <img src="My_Story_3.jpg" loading="lazy" />
-    <img src="My_Story_4.jpg" loading="lazy" />
-    <img src="My_Story_5.jpg" loading="lazy" />
-    <img src="My_Story_6.jpg" loading="lazy" />
-  </div>
-
-  <p>Leaving the military and stepping into engineering school was a challenge. I went from deployment zones to classrooms, trading a uniform for textbooks and lab equipment. It was unfamiliar territory, but every circuit I wired and every system I modeled gave me a stronger sense of direction. Engineering became more than a career choice. It became a way to grow, to solve meaningful problems, and to continue serving—just in a different way.</p>
-
+  <p>My journey began in the military, where I served as an MQ-1C Gray Eagle operator. I wasn't just flying drones; I was part of a team where mission success depended on trust, timing, and technology working in harmony. During that time, I worked alongside engineers who spoke the language of circuits and systems. I found myself wanting to understand the "why" behind the machines we relied on.</p>
+  <p><img src="My_Story_1.jpg" alt="My_Story_1"> <img src="My_Story_2.jpg" alt="My_Story_2"> <img src="My_Story_3.jpg" alt="My_Story_3"> <img src="My_Story_4.jpg" alt="My_Story_4"> <img src="My_Story_5.jpg" alt="My_Story_5"> <img src="My_Story_6.jpg" alt="My_Story_6"></p>
+  <p>Leaving the military and stepping into engineering school was a challenge. I went from deployment zones to classrooms, trading a uniform for textbooks and lab equipment. It was unfamiliar territory, but every circuit I wired and every system I modeled gave me a stronger sense of direction. Engineering became more than a career choice. It became a way to grow, to solve meaningful problems, and to continue serving-just in a different way.</p>
   <p>Today, I approach every project with the same mindset I carried in the military: be precise, stay reliable, and keep improving. Whether I am working on UAV power systems, embedded controls, or high-voltage electric vehicle motors, I carry a deep respect for the impact engineering can make in the real world. My mission now is to build things that work when it matters most.</p>
-</section>
-
-<section id="timeline-graphic" class="card">
   <h2>Timeline</h2>
-  <div class="timeline-v2">
-    
-    <div class="timeline-v2-item left" data-aos="fade-right">
-      <div class="content">
-        <img src="assets/images/timeline_2012.jpg" alt="2012">
-        <div class="text-block">
-          <h3>2012</h3>
-          <h4>Army UAV Operator</h4>
-          <p>Operated MQ-1C Gray Eagle drones. Sparked passion for systems & RF engineering.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-v2-item right" data-aos="fade-left">
-      <div class="content">
-        <img src="assets/images/timeline_2018.jpg" alt="2018">
-        <div class="text-block">
-          <h3>2018</h3>
-          <h4>Financial Auditor</h4>
-          <p>Built analytical rigor & leadership while auditing for a major hotel chain.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-v2-item left" data-aos="fade-right">
-      <div class="content">
-        <img src="assets/images/timeline_2021.jpg" alt="2021">
-        <div class="text-block">
-          <h3>2021</h3>
-          <h4>GPR Analyst</h4>
-          <p>Performed non-destructive testing and radar data analysis for Penhall Technologies.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-v2-item right" data-aos="fade-left">
-      <div class="content">
-        <img src="assets/images/timeline_2023.jpg" alt="2023">
-        <div class="text-block">
-          <h3>2023</h3>
-          <h4>Startup Engineer</h4>
-          <p>Founded American Tenet & FluxSpeed. Designed UAV & EV power/control systems.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-v2-item left" data-aos="fade-right">
-      <div class="content">
-        <img src="assets/images/timeline_2025.jpg" alt="2025">
-        <div class="text-block">
-          <h3>2025</h3>
-          <h4>CSULB EE Student</h4>
-          <p>Specializing in embedded, RF, and power electronics. Building real-world aerospace projects.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="projects">
+  <p><img src="assets/images/timeline_2012.jpg" alt="2012"></p>
+  <h3>2012</h3>
+  <h4>Army UAV Operator</h4>
+  <p>Operated MQ-1C Gray Eagle drones. Sparked passion for systems & RF engineering.</p>
+  <p><img src="assets/images/timeline_2018.jpg" alt="2018"></p>
+  <h3>2018</h3>
+  <h4>Financial Auditor</h4>
+  <p>Built analytical rigor & leadership while auditing for a major hotel chain.</p>
+  <p><img src="assets/images/timeline_2021.jpg" alt="2021"></p>
+  <h3>2021</h3>
+  <h4>GPR Analyst</h4>
+  <p>Performed non-destructive testing and radar data analysis for Penhall Technologies.</p>
+  <p><img src="assets/images/timeline_2023.jpg" alt="2023"></p>
+  <h3>2023</h3>
+  <h4>Startup Engineer</h4>
+  <p>Founded American Tenet & FluxSpeed. Designed UAV & EV power/control systems.</p>
+  <p><img src="assets/images/timeline_2025.jpg" alt="2025"></p>
+  <h3>2025</h3>
+  <h4>CSULB EE Student</h4>
+  <p>Specializing in embedded, RF, and power electronics. Building real-world aerospace projects.</p>
   <h2>Projects</h2>
-
-  <div class="card">
-    <h3>The Caladrius Project</h3>
-    <p>Led electrical integration for a Group 2 UAV platform with onboard RGB-D, EO/IR, LiDAR, and comms systems. Designed power distribution and signal routing for endurance and payload compatibility.</p>
-  </div>
-
-  <div class="card">
-    <h3>Multi Rotor Axial Flux Motor</h3>
-    <p>Developed a custom ESC using SiC MOSFETs and digital isolation for high-performance axial flux EV motors. Handled schematic capture, PCB design in KiCAD, and system testing.</p>
-  </div>
-</section>
-
-<section id="resume" class="card">
+  <h3>The Caladrius Project</h3>
+  <p>Led electrical integration for a Group 2 UAV platform with onboard RGB-D, EO/IR, LiDAR, and comms systems. Designed power distribution and signal routing for endurance and payload compatibility.</p>
+  <h3>Multi Rotor Axial Flux Motor</h3>
+  <p>Developed a custom ESC using SiC MOSFETs and digital isolation for high-performance axial flux EV motors. Handled schematic capture, PCB design in KiCAD, and system testing.</p>
   <h2>Resume</h2>
-  <p>You can view or download my resume here:</p>
-  <a href="Resume_July2025.pdf" target="_blank" class="button">Download Resume (PDF)</a>
-  <br><br>
-  <iframe src="Resume_July2025.pdf" width="100%" height="600px" style="border:none;"></iframe>
-</section>
-
-<section id="contact" class="card contact-box" data-aos="fade-up">
-  <h2 data-aos="fade-up" data-aos-delay="100">Contact</h2>
-
-  <p data-aos="fade-up" data-aos-delay="200">
-    Email: <a href="mailto:jon.a.tolden@gmail.com">jon.a.tolden@gmail.com</a>
-  </p>
-
-  <p data-aos="fade-up" data-aos-delay="300">
-    Phone: <a href="tel:+17142932180">(714) 293-2180</a>
-  </p>
-
-  <p data-aos="fade-up" data-aos-delay="400">
-    LinkedIn: <a href="https://linkedin.com/in/jontolden" target="_blank">linkedin.com/in/jontolden</a>
-  </p>
-
-  <p data-aos="fade-up" data-aos-delay="500">Location: Long Beach, CA (Pacific Time Zone)</p>
-  <p data-aos="fade-up" data-aos-delay="600">
-    Open to: Freelance PCB Design Work, UAS consulting, and full time employment
-  </p>
-
-  <div style="margin-top: 1rem;" data-aos="fade-up" data-aos-delay="700">
-    <a href="https://linkedin.com/in/jontolden" target="_blank" title="LinkedIn" style="margin-right: 1rem;">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" width="24" alt="LinkedIn" />
-    </a>
-    <a href="mailto:jon.a.tolden@gmail.com" title="Email">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" width="24" alt="Email" />
-    </a>
-  </div>
-</section>
-
-<footer>
+  <p>You can view or download my resume here:</p><a href="Resume_July2025.pdf">Download Resume (PDF)</a>
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:jon.a.tolden@gmail.com">jon.a.tolden@gmail.com</a></p>
+  <p>Phone: <a href="tel:+17142932180">(714) 293-2180</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/jontolden">linkedin.com/in/jontolden</a></p>
+  <p>Location: Long Beach, CA (Pacific Time Zone)</p>
+  <p>Open to: Freelance PCB Design Work, UAS consulting, and full time employment</p>
+  <p><a href="https://linkedin.com/in/jontolden"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" width="24" alt="LinkedIn"></a> <a href="mailto:jon.a.tolden@gmail.com"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" width="24" alt="Email"></a></p>
   <p>© 2025 Jon Tolden | Thank you for visiting my page!</p>
-</footer>
-
-<script>
-  // Dark mode toggle
-  const toggle = document.getElementById("theme-toggle");
-  toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
-  });
-
-  // Persist theme
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark");
-  }
-
-  // Scroll animation
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add("visible");
-        }, index * 150);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.card').forEach(el => observer.observe(el));
-
-</script>
-
 </body>
-
 </html>
