@@ -34,7 +34,7 @@
 <button id="contrast-toggle">High Contrast</button>
 <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Top</button>
 
-<header style="background: linear-gradient(rgba(46, 77, 47, 0.9), rgba(46, 77, 47, 0.9)), url('Website Background Image.png') center/cover no-repeat;">
+<header class="hero">
   <h1 data-aos="fade-down">Jon Tolden</h1>
   <img src="Tolden_Headshot_2.jpg" alt="Jon Tolden Headshot" data-aos="fade-up"/>
   <p data-aos="fade-up" data-aos-delay="100"><span class="typewriter"></span></p>
@@ -60,12 +60,12 @@
   <p>My journey began in the military, where I served as an MQ-1C Gray Eagle operator. I wasn’t just flying drones; I was part of a team where mission success depended on trust, timing, and technology working in harmony. During that time, I worked alongside engineers who spoke the language of circuits and systems. I found myself wanting to understand the "why" behind the machines we relied on.</p>
 
   <div class="collage">
-    <img src="My_Story_1.jpg" loading="lazy" />
-    <img src="My_Story_2.jpg" loading="lazy" />
-    <img src="My_Story_3.jpg" loading="lazy" />
-    <img src="My_Story_4.jpg" loading="lazy" />
-    <img src="My_Story_5.jpg" loading="lazy" />
-    <img src="My_Story_6.jpg" loading="lazy" />
+    <img src="My_Story_1.jpg" loading="lazy" class="floater" />
+    <img src="My_Story_2.jpg" loading="lazy" class="floater" />
+    <img src="My_Story_3.jpg" loading="lazy" class="floater" />
+    <img src="My_Story_4.jpg" loading="lazy" class="floater" />
+    <img src="My_Story_5.jpg" loading="lazy" class="floater" />
+    <img src="My_Story_6.jpg" loading="lazy" class="floater" />
   </div>
 
   <p>Leaving the military and stepping into engineering school was a challenge. I went from deployment zones to classrooms, trading a uniform for textbooks and lab equipment. It was unfamiliar territory, but every circuit I wired and every system I modeled gave me a stronger sense of direction. Engineering became more than a career choice. It became a way to grow, to solve meaningful problems, and to continue serving—just in a different way.</p>
@@ -228,6 +228,12 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.card').forEach(el => observer.observe(el));
+
+  // Parallax effect for header background
+  const hero = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    hero.style.backgroundPositionY = `${window.scrollY * 0.5}px`;
+  });
 </script>
 
 </body>
