@@ -236,5 +236,28 @@
   });
 </script>
 
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cursor = document.querySelector('.cursor');
+    const follower = document.querySelector('.cursor-follower');
+    let x = 0, y = 0;
+    let fx = 0, fy = 0;
+    document.addEventListener('mousemove', e => {
+      x = e.clientX;
+      y = e.clientY;
+      cursor.style.transform = `translate(${x}px, ${y}px)`;
+    });
+    function loop() {
+      fx += (x - fx) / 8;
+      fy += (y - fy) / 8;
+      follower.style.transform = `translate(${fx}px, ${fy}px)`;
+      requestAnimationFrame(loop);
+    }
+    loop();
+  });
+</script>
+
 </body>
 </html>
