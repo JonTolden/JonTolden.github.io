@@ -43,6 +43,27 @@
       color: var(--dark-text);
     }
 
+    body.high-contrast {
+      background-color: #000;
+      color: #fff;
+    }
+
+    body.high-contrast nav,
+    body.high-contrast header,
+    body.high-contrast footer {
+      background-color: #000;
+      color: #fff;
+    }
+
+    body.high-contrast a {
+      color: yellow;
+    }
+
+    body.high-contrast button {
+      background-color: yellow;
+      color: #000;
+    }
+
     header {
       background-color: var(--primary);
       color: white;
@@ -93,6 +114,10 @@
       backdrop-filter: blur(6px);
     }
 
+    nav.hidden {
+      display: none;
+    }
+
     nav a {
       color: white;
       text-decoration: none;
@@ -103,6 +128,24 @@
 
     nav a:hover {
       color: var(--accent);
+    }
+
+    #contrast-toggle, #nav-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 8rem;
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 999;
+    }
+
+    #nav-toggle {
+      right: 1rem;
+      top: 3.5rem;
     }
 
     #theme-toggle {
@@ -130,7 +173,6 @@
       z-index: 999;
       cursor: pointer;
     }
-
     section {
       padding: 3rem 5%;
       max-width: 1000px;
@@ -309,6 +351,8 @@
 </script>
 
 <button id="theme-toggle">Toggle Dark Mode</button>
+<button id="contrast-toggle">High Contrast</button>
+<button id="nav-toggle">Hide Navigation</button>
 <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Top</button>
 
 <header style="background: linear-gradient(rgba(46, 77, 47, 0.9), rgba(46, 77, 47, 0.9)), url('assets/images/uav_motor_banner.jpg') center/cover no-repeat;">
@@ -474,9 +518,28 @@
     localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
   });
 
+  // High contrast toggle
+  const contrastToggle = document.getElementById("contrast-toggle");
+  contrastToggle.addEventListener("click", () => {
+    document.body.classList.toggle("high-contrast");
+    localStorage.setItem("contrast", document.body.classList.contains("high-contrast") ? "on" : "off");
+  });
+
+  // Hide/show navigation
+  const navToggle = document.getElementById("nav-toggle");
+  const nav = document.querySelector("nav");
+  navToggle.addEventListener("click", () => {
+    nav.classList.toggle("hidden");
+    navToggle.textContent = nav.classList.contains("hidden") ? "Show Navigation" : "Hide Navigation";
+  });
+
   // Persist theme
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
+  }
+
+  if (localStorage.getItem("contrast") === "on") {
+    document.body.classList.add("high-contrast");
   }
 
   // Scroll animation
