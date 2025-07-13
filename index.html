@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jon Tolden | Electrical Engineer</title>
+  <meta name="description" content="Jon Tolden | Veteran Electrical Engineer specializing in UAVs, EVs, and embedded systems.">
+  <meta name="keywords" content="Electrical Engineer, UAV, EV, Jon Tolden, Power Electronics, Embedded Systems">
+  <meta name="author" content="Jon Tolden">
+  <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     :root {
@@ -43,7 +47,7 @@
       text-align: center;
     }
 
-    header h1, header p {
+    header h1 {
       opacity: 0;
       transform: translateY(-20px);
       animation: fadeDrop 1s ease-out forwards;
@@ -89,6 +93,19 @@
       cursor: pointer;
       border-radius: 5px;
       z-index: 999;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      padding: 0.6rem 1rem;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      z-index: 999;
+      cursor: pointer;
     }
 
     section {
@@ -142,186 +159,37 @@
       transform: scale(1.05);
     }
 
-    .collage {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 10px;
-      margin-top: 1.5rem;
-    }
-
-    .collage img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      object-fit: cover;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      transition: transform 0.4s ease, box-shadow 0.3s ease;
-    }
-
-    .collage img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background-color: var(--primary);
-      color: white;
-      font-size: 0.9rem;
-    }
-
-    .contact-box p a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .contact-box p a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
-    }
-
-    .timeline-item[data-aos] {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.6s ease-out;
-    }
-
     .aos-animate.timeline-item[data-aos] {
       opacity: 1 !important;
       transform: translateY(0) !important;
     }
-
-.timeline-v2 {
-  position: relative;
-  margin: 4rem 0;
-  padding: 2rem 0;
-}
-
-.timeline-v2::after {
-  content: '';
-  position: absolute;
-  width: 4px;
-  background-color: var(--primary);
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -2px;
-}
-
-.timeline-v2-item {
-  padding: 1rem 2rem;
-  position: relative;
-  width: 50%;
-  box-sizing: border-box;
-}
-
-.timeline-v2-item .content {
-  background-color: var(--card-bg-light);
-  padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.timeline-v2-item img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.timeline-v2-item .text-block {
-  flex: 1;
-}
-
-.timeline-v2-item.left {
-  left: 0;
-  text-align: right;
-}
-
-.timeline-v2-item.right {
-  left: 50%;
-  text-align: left;
-}
-
-.timeline-v2-item.left .content {
-  flex-direction: row-reverse;
-}
-
-body.dark .timeline-v2-item .content {
-  background-color: var(--card-bg-dark);
-}
-
-@media (max-width: 768px) {
-  .timeline-v2::after {
-    left: 8px;
-  }
-
-  .timeline-v2-item {
-    width: 100%;
-    padding-left: 2rem;
-    padding-right: 0;
-  }
-
-  .timeline-v2-item.left,
-  .timeline-v2-item.right {
-    left: 0;
-    text-align: left;
-  }
-
-  .timeline-v2-item.left .content,
-  .timeline-v2-item.right .content {
-    flex-direction: row;
-  }
-}
-
-.contact-box a img {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.8;
-}
-.contact-box a img:hover {
-  transform: scale(1.2);
-  opacity: 1;
-}
-    
   </style>
 </head>
 <body>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     AOS.init({ duration: 1000, once: true });
+
+    new Typed(".typewriter", {
+      strings: ["Veteran", "Electrical Engineer", "UAS Professional", "EV Motor Designer", "Energy Systems Innovator"],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true,
+      backDelay: 1200
+    });
   });
 </script>
 
-
-
 <button id="theme-toggle">Toggle Dark Mode</button>
+<button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Top</button>
 
-<header data-aos="fade-down" data-aos-duration="1200">
-  <h1 data-aos="fade-down" data-aos-delay="100">Jon Tolden</h1>
-  <img
-    src="Tolden_Headshot_2.jpg"
-    alt="Jon Tolden Headshot"
-    style="width:120px;border-radius:50%;margin-top:1rem;"
-    data-aos="zoom-in"
-    data-aos-delay="300"
-  />
-  <p data-aos="fade-up" data-aos-delay="500">
-    Veteran | Electrical Engineer | UAS Professional | EV Motor Designer | High Efficiency Energy Solutions
-  </p>
+<header>
+  <h1>Jon Tolden</h1>
+  <p><span class="typewriter"></span></p>
 </header>
-
 
 <nav>
   <a href="#about">About</a>
