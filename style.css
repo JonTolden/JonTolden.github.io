@@ -19,17 +19,14 @@ html {
 body {
   font-family: "Inter", "Segoe UI", sans-serif;
   margin: 0;
-  background-color: var(--light-bg);
-  background: linear-gradient(to bottom, var(--light-bg) 0%, #e8f5e9 100%);
+  background: url('EE Wallpaper.jpg') center/cover fixed no-repeat;
   color: var(--light-text);
   line-height: 1.6;
-  transition: background-color 0.3s, color 0.3s;
   transition: background 0.3s, color 0.3s;
 }
 
 body.dark {
-  background-color: var(--dark-bg);
-  background: radial-gradient(circle at top left, #1e3521, var(--dark-bg));
+  background: radial-gradient(circle at top left, #1e3521, var(--dark-bg)), url('EE Wallpaper.jpg') center/cover fixed no-repeat;
   color: var(--dark-text);
 }
 
