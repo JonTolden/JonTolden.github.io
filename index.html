@@ -352,7 +352,6 @@
 
 <button id="theme-toggle">Toggle Dark Mode</button>
 <button id="contrast-toggle">High Contrast</button>
-<button id="nav-toggle">Hide Navigation</button>
 <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Top</button>
 
 <header style="background: linear-gradient(rgba(46, 77, 47, 0.9), rgba(46, 77, 47, 0.9)), url('assets/images/uav_motor_banner.jpg') center/cover no-repeat;">
@@ -523,14 +522,6 @@
   contrastToggle.addEventListener("click", () => {
     document.body.classList.toggle("high-contrast");
     localStorage.setItem("contrast", document.body.classList.contains("high-contrast") ? "on" : "off");
-  });
-
-  // Hide/show navigation
-  const navToggle = document.getElementById("nav-toggle");
-  const nav = document.querySelector("nav");
-  navToggle.addEventListener("click", () => {
-    nav.classList.toggle("hidden");
-    navToggle.textContent = nav.classList.contains("hidden") ? "Show Navigation" : "Hide Navigation";
   });
 
   // Persist theme
