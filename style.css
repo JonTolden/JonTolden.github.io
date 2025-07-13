@@ -274,17 +274,74 @@ a.button:hover {
   position: relative;
   width: 50%;
   padding: 1rem 2rem;
+  transition: transform 0.3s;
   box-sizing: border-box;
 }
 
+.timeline-v2-item:hover {
+  transform: translateY(-4px);
+}
+
+.timeline-v2-item::before {
+  content: "";
+  position: absolute;
+  top: 1.25rem;
+  left: 100%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--card-bg-light);
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.25);
+  z-index: 1;
+}
+
+.timeline-v2-item.right::before {
+  left: 0;
+}
+
+body.dark .timeline-v2-item::before {
+  border-color: var(--card-bg-dark);
+}
+
 .timeline-v2-item .content {
+  position: relative;
   background: rgba(255, 255, 255, 0.85);
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
+.timeline-v2-item.left .content::after,
+.timeline-v2-item.right .content::after {
+  content: "";
+  position: absolute;
+  top: 1.25rem;
+  border: solid transparent;
+  border-width: 8px;
+}
+
+.timeline-v2-item.left .content::after {
+  right: -16px;
+  border-left-color: rgba(255, 255, 255, 0.85);
+}
+
+.timeline-v2-item.right .content::after {
+  left: -16px;
+  border-right-color: rgba(255, 255, 255, 0.85);
+}
+
+body.dark .timeline-v2-item.left .content::after {
+  border-left-color: rgba(34, 48, 34, 0.85);
+}
+
+body.dark .timeline-v2-item.right .content::after {
+  border-right-color: rgba(34, 48, 34, 0.85);
+}
+
 body.dark .timeline-v2-item .content {
+  position: relative;
   background: rgba(34, 48, 34, 0.85);
 }
 
