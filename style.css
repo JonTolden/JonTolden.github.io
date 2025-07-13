@@ -6,10 +6,7 @@
   --accent: #4caf50;
   --light-bg: #f4f4f4;
   --light-text: #1a1a1a;
-  --dark-bg: #121d14;
-  --dark-text: #f4f4f4;
   --card-bg-light: white;
-  --card-bg-dark: #223022;
 }
 
 html {
@@ -23,32 +20,6 @@ body {
   color: var(--light-text);
   line-height: 1.6;
   transition: background 0.3s, color 0.3s;
-}
-
-body.dark {
-  background: radial-gradient(circle at top left, #1e3521, var(--dark-bg)), url('EE Wallpaper.jpg') center/cover fixed no-repeat;
-  color: var(--dark-text);
-}
-
-body.high-contrast {
-  background-color: #000;
-  color: #fff;
-}
-
-body.high-contrast nav,
-body.high-contrast header,
-body.high-contrast footer {
-  background-color: #000;
-  color: #fff;
-}
-
-body.high-contrast a {
-  color: yellow;
-}
-
-body.high-contrast button {
-  background-color: yellow;
-  color: #000;
 }
 
 header {
@@ -126,36 +97,12 @@ nav a:hover {
   color: var(--accent);
 }
 
-#contrast-toggle {
-  position: fixed;
-  top: 3.5rem;
-  right: 1rem;
-  background-color: var(--accent);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  z-index: 999;
-}
 
 #nav-toggle {
   right: 1rem;
   top: 3.5rem;
 }
 
-#theme-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background-color: var(--accent);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  z-index: 999;
-}
 
 .back-to-top {
   position: fixed;
@@ -200,10 +147,6 @@ section {
   transform: translateY(0);
 }
 
-body.dark .card {
-  background-color: var(--card-bg-dark);
-  background: rgba(34, 48, 34, 0.8);
-}
 
 h2 {
   color: var(--primary);
@@ -214,10 +157,6 @@ h2 {
   color: var(--secondary);
 }
 
-body.dark h2,
-body.dark .card h3 {
-  color: var(--accent);
-}
 
 a.button {
   display: inline-block;
@@ -317,9 +256,6 @@ a.button:hover {
   left: 0;
 }
 
-body.dark .timeline-v2-item::before {
-  border-color: var(--card-bg-dark);
-}
 
 .timeline-v2-item .content {
   position: relative;
@@ -346,19 +282,6 @@ body.dark .timeline-v2-item::before {
 .timeline-v2-item.right .content::after {
   left: -16px;
   border-right-color: rgba(255, 255, 255, 0.85);
-}
-
-body.dark .timeline-v2-item.left .content::after {
-  border-left-color: rgba(34, 48, 34, 0.85);
-}
-
-body.dark .timeline-v2-item.right .content::after {
-  border-right-color: rgba(34, 48, 34, 0.85);
-}
-
-body.dark .timeline-v2-item .content {
-  position: relative;
-  background: rgba(34, 48, 34, 0.85);
 }
 
 .timeline-v2-item.left {
