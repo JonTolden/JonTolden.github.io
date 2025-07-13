@@ -98,6 +98,7 @@ header h1 {
   transform: translateY(-20px);
   animation: fadeDrop 1s ease-out forwards;
   font-weight: 600;
+  color: white;
 }
 
 header img {
