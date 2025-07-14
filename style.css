@@ -178,6 +178,10 @@ section {
   margin: auto;
 }
 
+section h2 {
+  color: #000;
+}
+
 .card {
   background-color: var(--card-bg-light);
   background: rgba(255, 255, 255, 0.8);
