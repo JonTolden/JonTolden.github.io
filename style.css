@@ -80,7 +80,7 @@ a:hover {
 
 header {
   background-color: var(--primary);
-  color: var(--light-text);
+  color: var(--accent);
   padding: 3rem 1rem 2rem;
   text-align: center;
   background-attachment: fixed;
@@ -101,7 +101,7 @@ header h1 {
   transform: translateY(-20px);
   animation: fadeDrop 1s ease-out forwards;
   font-weight: 600;
-  color: var(--light-text);
+  color: var(--accent);
 }
 
 header img {
