@@ -193,7 +193,7 @@ section h2 {
 
 .card {
   background-color: var(--card-bg-light);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.5);
   padding: 1.5rem;
   margin-bottom: 2rem;
   border-radius: 8px;
@@ -319,7 +319,7 @@ a.button:hover {
 
 .timeline-v2-item .content {
   position: relative;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.5);
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -336,12 +336,12 @@ a.button:hover {
 
 .timeline-v2-item.left .content::after {
   right: -16px;
-  border-left-color: rgba(255, 255, 255, 0.85);
+  border-left-color: rgba(255, 255, 255, 0.5);
 }
 
 .timeline-v2-item.right .content::after {
   left: -16px;
-  border-right-color: rgba(255, 255, 255, 0.85);
+  border-right-color: rgba(255, 255, 255, 0.5);
 }
 
 .timeline-v2-item.left {
