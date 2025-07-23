@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Page metadata and external stylesheets -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jon Tolden | Electrical Engineer</title>
-  <meta name="description" content="Jon Tolden | Veteran Electrical Engineer specializing in UAVs, EVs, and embedded systems.">
-  <meta name="keywords" content="Electrical Engineer, UAV, EV, Jon Tolden, Power Electronics, Embedded Systems">
-  <meta name="author" content="Jon Tolden">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Jon Tolden | Veteran Electrical Engineer specializing in UAVs, EVs, and embedded systems." />
+  <meta name="keywords" content="Electrical Engineer, UAV, EV, Jon Tolden, Power Electronics, Embedded Systems" />
+  <meta name="author" content="Jon Tolden" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Fonts and third‑party libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Initialize AOS animations and typing effect -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
@@ -30,8 +34,10 @@
   });
 </script>
 
+<!-- Back to top shortcut -->
 <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Top</button>
 
+<!-- Hero header with typing animation -->
 <header class="hero">
   <h1 data-aos="fade-down">Jon Tolden</h1>
   <img src="Tolden_Headshot_2.jpg" alt="Jon Tolden Headshot" data-aos="fade-up"/>
@@ -39,6 +45,7 @@
   <p class="subtitle" data-aos="fade-up" data-aos-delay="200"><span class="highlight">Engineering systems that fly, drive, and endure.</span></p>
 </header>
 
+<!-- Site navigation -->
 <nav>
   <a href="#about">About</a>
   <a href="#mystory">My Story</a>
@@ -48,11 +55,15 @@
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- ===== Main content sections ===== -->
+
+  <!-- About section -->
 <section id="about" class="card">
   <h2>About</h2>
   <p>This site is a personal and professional space that highlights my journey from military operations to engineering innovation. It features the projects that have shaped my career, the skills I have developed, and the direction I am heading. It is also a place to connect with others who are passionate about solving complex problems through thoughtful and efficient engineering.</p>
 </section>
 
+<!-- My story and collage -->
 <section id="mystory" class="card">
   <h2>My Story</h2>
   <p>My journey began in the military, where I served as an MQ-1C Gray Eagle operator. I wasn’t just flying drones; I was part of a team where mission success depended on trust, timing, and technology working in harmony. During that time, I worked alongside engineers who spoke the language of circuits and systems. I found myself wanting to understand the "why" behind the machines we relied on.</p>
@@ -65,12 +76,14 @@
     <img src="My_Story_5.jpg" alt="My Story photo 5" class="floater" loading="lazy" />
     <img src="My_Story_6.jpg" alt="My Story photo 6" class="floater" loading="lazy" />
   </div>
+  <!-- End collage -->
 
   <p>Leaving the military and stepping into engineering school was a challenge. I went from deployment zones to classrooms, trading a uniform for textbooks and lab equipment. It was unfamiliar territory, but every circuit I wired and every system I modeled gave me a stronger sense of direction. Engineering became more than a career choice. It became a way to grow, to solve meaningful problems, and to continue serving—just in a different way.</p>
 
   <p>Today, I approach every project with the same mindset I carried in the military: be precise, stay reliable, and keep improving. Whether I am working on UAV power systems, embedded controls, or high-voltage electric vehicle motors, I carry a deep respect for the impact engineering can make in the real world. My mission now is to build things that work when it matters most.</p>
 </section>
 
+<!-- Projects showcase -->
 <section id="projects" class="card">
   <h2>Projects</h2>
 
@@ -90,6 +103,7 @@
   </div>
 </section>
 
+<!-- Career timeline -->
 <section id="timeline-graphic" class="card">
   <h2>Timeline</h2>
   <div class="timeline-v2">
@@ -152,6 +166,7 @@
   </div>
 </section>
 
+<!-- Resume embedded PDF -->
 <section id="resume" class="card">
   <h2>Resume</h2>
   <p>You can view or download my resume here:</p>
@@ -160,6 +175,7 @@
   <iframe src="Resume_July2025.pdf" width="100%" height="600" style="border:none;"></iframe>
 </section>
 
+<!-- Contact information -->
 <section id="contact" class="card contact-box" data-aos="fade-up">
   <h2 data-aos="fade-up" data-aos-delay="100">Contact</h2>
 
@@ -190,10 +206,12 @@
   </div>
 </section>
 
+<!-- Footer with copyright -->
 <footer>
   <p>© 2025 Jon Tolden | Thank you for visiting my page!</p>
 </footer>
 
+<!-- Intersection observer for scroll animations -->
 <script>
 
   // Scroll animation
@@ -217,8 +235,10 @@
   });
 </script>
 
+<!-- Custom cursor elements -->
 <div class="cursor"></div>
 <div class="cursor-follower"></div>
+<!-- Cursor movement script -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const cursor = document.querySelector('.cursor');

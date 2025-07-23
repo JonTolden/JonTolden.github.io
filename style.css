@@ -1,5 +1,9 @@
 /* Main Stylesheet */
 
+/* ======================
+   CSS Variables
+   ====================== */
+
 :root {
   /* Modernized color palette */
   --primary: #1b1f24;
@@ -10,6 +14,7 @@
   --card-bg-light: #ffffff;
 }
 
+/* Basic page setup */
 html {
   scroll-behavior: smooth;
 }
@@ -78,6 +83,7 @@ a:hover {
   font-weight: 600;
 }
 
+/* ==== Hero Section ==== */
 header {
   background-color: var(--primary);
   color: var(--accent);
@@ -128,6 +134,7 @@ header p {
   }
 }
 
+/* Navigation bar */
 nav {
   text-align: center;
   padding: 0.75rem 0;
@@ -162,6 +169,7 @@ nav a:hover {
 }
 
 
+/* Back to top button */
 .back-to-top {
   position: fixed;
   bottom: 2rem;
@@ -181,6 +189,7 @@ nav a:hover {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
+/* Content sections */
 section {
   padding: 3rem 5%;
   max-width: 1000px;
@@ -191,6 +200,7 @@ section h2 {
   color: #000;
 }
 
+/* Reusable card container */
 .card {
   background-color: var(--card-bg-light);
   background: rgba(255, 255, 255, 0.5);
@@ -269,6 +279,7 @@ a.button:hover {
   filter: brightness(1.1);
 }
 
+/* Vertical timeline layout */
 .timeline-v2 {
   position: relative;
   padding: 2rem 0;
@@ -374,6 +385,7 @@ a.button:hover {
   }
 }
 
+/* Footer styles */
 footer {
   text-align: center;
   background-color: var(--secondary);
