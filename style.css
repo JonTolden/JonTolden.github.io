@@ -411,7 +411,7 @@ a.button:hover {
 footer {
   text-align: center;
   background-color: var(--secondary);
-  color: var(--light-text);
+  color: #fff;
   padding: 1rem;
 }
 /* Animated cursor */
