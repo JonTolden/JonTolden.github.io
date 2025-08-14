@@ -431,10 +431,20 @@ footer {
   background: var(--accent);
 }
 
-.cursor-follower {
-  width: 24px;
-  height: 24px;
-  border: 2px solid var(--accent);
-  opacity: 0.7;
-  transition: transform 0.15s ease-out;
+  .cursor-follower {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--accent);
+    opacity: 0.7;
+    transition: transform 0.15s ease-out;
+  }
+
+/* Contact section overrides */
+#contact {
+  color: #000;
+}
+
+#contact a,
+#contact .highlight {
+  color: #000;
 }
