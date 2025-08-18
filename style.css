@@ -27,6 +27,7 @@ html {
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
+  margin-left: 200px;
   background: url('EE Wallpaper.jpg') center/cover fixed no-repeat;
   color: var(--light-text);
   line-height: 1.6;
@@ -151,15 +152,18 @@ header p {
 
 /* Navigation bar */
 nav {
-  text-align: center;
-  padding: 0.75rem 0;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  height: 100vh;
+  width: 200px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
   z-index: 998;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(6px);
   background-color: rgba(27, 31, 36, 0.75);
-  animation: slideDown 0.8s ease-out;
 }
 
 nav.hidden {
@@ -169,20 +173,19 @@ nav.hidden {
 nav a {
   color: var(--light-bg);
   text-decoration: none;
-  margin: 0 1.5rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
   font-weight: 500;
+  width: 100%;
+  display: block;
   transition: color 0.3s, transform 0.3s;
 }
 
 nav a:hover {
   color: var(--accent);
-  transform: scale(1.1);
+  transform: translateX(5px);
 }
 
-@keyframes slideDown {
-  from { transform: translateY(-100%); }
-  to { transform: translateY(0); }
-}
 
 
 #nav-toggle {
@@ -447,4 +450,28 @@ footer {
 #contact a,
 #contact .highlight {
   color: #000;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+  body {
+    margin-left: 0;
+  }
+
+  nav {
+    position: static;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    padding: 0.75rem 0;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  }
+
+  nav a {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+    width: auto;
+    display: inline-block;
+  }
 }
