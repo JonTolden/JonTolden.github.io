@@ -314,11 +314,11 @@ a.button:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
-  margin: 1rem 0;
 }
 
 .project-collage-grid img {
   width: 100%;
+  height: auto;
   height: 150px;
   object-fit: cover;
   border-radius: 6px;
