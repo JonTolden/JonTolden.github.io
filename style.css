@@ -291,6 +291,14 @@ a.button:hover {
   animation: float 6s ease-in-out infinite;
 }
 
+.project-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
