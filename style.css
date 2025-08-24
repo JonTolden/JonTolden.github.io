@@ -291,6 +291,18 @@ a.button:hover {
   animation: float 6s ease-in-out infinite;
 }
 
+.project-collage {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.project-collage img {
+  width: 50%;
+  height: auto;
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
