@@ -9,7 +9,7 @@
   <meta name="author" content="Jon Tolden" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -28,7 +28,9 @@
       </div>
     </div>
     <div class="headshot-frame">
-      <img src="Tolden_Headshot_2.jpg" alt="Jon Tolden headshot" class="hero-headshot" loading="lazy" />
+      <div class="headshot-stage">
+        <img src="Tolden_Headshot_2.jpg" alt="Jon Tolden headshot" class="hero-headshot" loading="lazy" />
+      </div>
     </div>
   </header>
 
@@ -147,8 +149,9 @@
     <section id="projects" class="card">
       <div class="section-header">
         <h2>All Projects</h2>
-        <p>Concise homepage highlights with full engineering details in each project case study.</p>
+        <p>Curated project highlights. Flagship case studies are shown first, with additional work available below.</p>
       </div>
+      <p class="projects-subhead">Flagship Case Studies</p>
 
       <div class="project-list">
         <article class="project-summary">
@@ -156,13 +159,12 @@
           <div class="project-summary-content">
             <h3>The Caladrius Project (HAVOC-03)</h3>
             <div class="meta-chips">
-              <span>Date: May-Nov 2025</span><span>Role: Engineering Project Manager Intern</span><span>Tools: CAD + FEA + Avionics Integration</span><span>Status: Complete</span>
+              <span>May-Nov 2025</span><span>Engineering Project Manager Intern</span><span>CAD · FEA · Avionics Integration</span>
             </div>
-            <p class="opening">Built a long-endurance fixed-wing UAV to rapidly field a modular, mission-adaptable platform during a compressed RDT&amp;E schedule.</p>
+            <p class="opening">Built a long-endurance fixed-wing UAV in a compressed RDT&amp;E cycle to field a modular mission-ready platform.</p>
             <ul>
               <li>Led interdisciplinary coordination across mechanical, avionics, and autonomy workstreams.</li>
-              <li>Contributed CAD and FEA-informed decisions for structural and system integration.</li>
-              <li>Delivered a flight-ready platform for iterative mission profile development.</li>
+              <li>Drove CAD and FEA-informed structural and systems integration decisions.</li>
             </ul>
             <a class="text-link" href="projects/caladrius.html">View Project Details →</a>
           </div>
@@ -173,13 +175,13 @@
           <div class="project-summary-content">
             <h3>Stackable ESP32 RF Communication Module for ESC Systems</h3>
             <div class="meta-chips">
-              <span>Date: Spring 2026</span><span>Role: PCB Design Lead</span><span>Tools: KiCad, ESP32, Arduino IDE</span><span>Status: Complete</span>
+              <span>Spring 2026</span><span>PCB Design Lead</span><span>KiCad · ESP32 · Arduino IDE</span>
             </div>
-            <p class="opening">Designed and built a stackable ESP32 PCB that solved wireless control and expansion limitations in an ESC senior-design platform.</p>
+            <p class="opening">Designed a stackable ESP32 PCB that solved wireless control and expansion limits in an ESC senior-design platform.</p>
             <ul>
-              <li>Completed schematic capture, layout, assembly, firmware bring-up, and board-level debugging.</li>
+              <li>Owned schematic capture, layout, assembly, firmware bring-up, and board-level debug.</li>
               <li>Integrated joystick control and board-to-board communication interfaces.</li>
-              <li>Recovered routing issues through targeted rework and validation testing.</li>
+              <li>Recovered routing issues through targeted rework and bench validation.</li>
             </ul>
             <a class="text-link" href="projects/esp32-rf-module.html">View Project Details →</a>
           </div>
@@ -190,69 +192,71 @@
           <div class="project-summary-content">
             <h3>Discrete Analog BJT-Based 555 Timer</h3>
             <div class="meta-chips">
-              <span>Date: Spring 2026</span><span>Role: Analog / PCB Designer</span><span>Tools: KiCad, LTspice</span><span>Board Type: Through-hole Prototype</span>
+              <span>Spring 2026</span><span>Analog / PCB Designer</span><span>KiCad · LTspice · Through-hole Prototype</span>
             </div>
-            <p class="opening">Implemented a discrete transistor-level 555 timer to validate analog timing behavior without relying on an integrated timer IC.</p>
+            <p class="opening">Implemented a transistor-level 555 timer to validate analog timing behavior without relying on a timer IC.</p>
             <ul>
               <li>Designed comparator, flip-flop, output, reset, and discharge stages with discrete BJTs.</li>
-              <li>Performed LTspice simulation before fabrication to de-risk switching and timing behavior.</li>
-              <li>Assembled and validated a full teaching and test platform for analog fundamentals.</li>
+              <li>Simulated switching and timing in LTspice before fabrication.</li>
+              <li>Assembled and validated a complete teaching and test platform for analog fundamentals.</li>
             </ul>
             <a class="text-link" href="projects/discrete-555-timer.html">View Project Details →</a>
           </div>
         </article>
-
-        <article class="project-summary">
-          <img src="TCP Image 5.jpg" alt="Energy harvesting hardware image" loading="lazy" />
-          <div class="project-summary-content">
-            <h3>BQ25570 Pendulum Energy Harvester PCB</h3>
-            <div class="meta-chips">
-              <span>Date: Spring 2026</span><span>Role: PCB Design Lead</span><span>Tools: KiCad, LTspice, BQ25570</span><span>Status: Complete</span>
-            </div>
-            <p class="opening">Developed a configurable energy-harvesting PCB to convert low-level, intermittent multi-coil AC input into a usable storage/output pathway.</p>
-            <ul>
-              <li>Integrated rectification, harvesting, storage, and output routing into one board.</li>
-              <li>Enabled series/parallel channel experimentation with connectorized input architecture.</li>
-              <li>Built a repeatable bench platform for future load and supercapacitor testing.</li>
-            </ul>
-            <a class="text-link" href="projects/bq25570-harvester.html">View Project Details →</a>
-          </div>
-        </article>
-
-        <article class="project-summary">
-          <img src="TCP Image 4.jpg" alt="Power protection board development image" loading="lazy" />
-          <div class="project-summary-content">
-            <h3>DRV Power Protection &amp; Monitoring PCB</h3>
-            <div class="meta-chips">
-              <span>Date: Spring 2026</span><span>Role: Power / PCB Designer</span><span>Tools: KiCad, Bench Validation</span><span>Board Type: 4-Layer Inline</span>
-            </div>
-            <p class="opening">Engineered an inline 4-layer board that solved protection and sensing-access bottlenecks during high-current DRV motor-control bring-up.</p>
-            <ul>
-              <li>Architected connectorized battery, current, and temperature monitoring points.</li>
-              <li>Separated thermal and high-current regions to improve bench reliability.</li>
-              <li>Reduced ad-hoc wiring and improved repeatability for debug and fault isolation.</li>
-            </ul>
-            <a class="text-link" href="projects/drv-power-protection.html">View Project Details →</a>
-          </div>
-        </article>
-
-        <article class="project-summary">
-          <img src="TCP Image 6.jpg" alt="Axial flux motor concept image" loading="lazy" />
-          <div class="project-summary-content">
-            <h3>Multi-Rotor Axial Flux Motor</h3>
-            <div class="meta-chips">
-              <span>Date: 2026-Present</span><span>Role: Electrical Engineer</span><span>Tools: EMWorks, Elmer, FEMM, SimScale</span><span>Status: In Progress</span>
-            </div>
-            <p class="opening">Developing a multi-rotor axial-flux architecture to improve torque density and efficiency for EV and UAV propulsion use cases.</p>
-            <ul>
-              <li>Conducting electromagnetic and thermal simulation-driven design iteration.</li>
-              <li>Evaluating rotor-stator geometry for performance and scalability.</li>
-              <li>Preparing design checkpoints for hardware validation planning.</li>
-            </ul>
-            <a class="text-link" href="projects/axial-flux-motor.html">View Project Details →</a>
-          </div>
-        </article>
       </div>
+
+      <details class="project-collapsible">
+        <summary>Show Additional Projects</summary>
+        <div class="project-list additional-projects">
+          <article class="project-summary">
+            <img src="TCP Image 5.jpg" alt="Energy harvesting hardware image" loading="lazy" />
+            <div class="project-summary-content">
+              <h3>BQ25570 Pendulum Energy Harvester PCB</h3>
+              <div class="meta-chips">
+                <span>Spring 2026</span><span>PCB Design Lead</span><span>KiCad · LTspice · BQ25570</span>
+              </div>
+              <p class="opening">Developed a configurable energy-harvesting PCB that converted intermittent multi-coil AC input into usable storage/output pathways.</p>
+              <ul>
+                <li>Integrated rectification, harvesting, storage, and output routing into one board.</li>
+                <li>Enabled series/parallel channel experimentation through connectorized inputs.</li>
+              </ul>
+              <a class="text-link" href="projects/bq25570-harvester.html">View Project Details →</a>
+            </div>
+          </article>
+
+          <article class="project-summary">
+            <img src="TCP Image 4.jpg" alt="Power protection board development image" loading="lazy" />
+            <div class="project-summary-content">
+              <h3>DRV Power Protection &amp; Monitoring PCB</h3>
+              <div class="meta-chips">
+                <span>Spring 2026</span><span>Power / PCB Designer</span><span>KiCad · Bench Validation · 4-Layer</span>
+              </div>
+              <p class="opening">Engineered an inline 4-layer board that removed protection and sensing bottlenecks during high-current DRV bring-up.</p>
+              <ul>
+                <li>Architected connectorized battery, current, and temperature monitoring points.</li>
+                <li>Improved bench repeatability and fault isolation by reducing ad-hoc wiring.</li>
+              </ul>
+              <a class="text-link" href="projects/drv-power-protection.html">View Project Details →</a>
+            </div>
+          </article>
+
+          <article class="project-summary">
+            <img src="TCP Image 6.jpg" alt="Axial flux motor concept image" loading="lazy" />
+            <div class="project-summary-content">
+              <h3>Multi-Rotor Axial Flux Motor</h3>
+              <div class="meta-chips">
+                <span>2026-Present</span><span>Electrical Engineer</span><span>EMWorks · Elmer · FEMM · SimScale</span>
+              </div>
+              <p class="opening">Developing a multi-rotor axial-flux architecture aimed at higher torque density for EV and UAV propulsion.</p>
+              <ul>
+                <li>Running electromagnetic and thermal simulation-driven design iteration.</li>
+                <li>Evaluating rotor-stator geometry tradeoffs for performance and scalability.</li>
+              </ul>
+              <a class="text-link" href="projects/axial-flux-motor.html">View Project Details →</a>
+            </div>
+          </article>
+        </div>
+      </details>
     </section>
 
     <section class="card recruiter-cta">
