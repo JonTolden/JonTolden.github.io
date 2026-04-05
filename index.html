@@ -84,7 +84,7 @@
 <!-- Projects showcase -->
   <section id="projects" class="card" data-aos="fade-up">
     <h2>Projects</h2>
-    <p>Highlighted below are six core engineering projects from my current portfolio, spanning UAV systems, embedded hardware, RF-enabled control modules, advanced electric propulsion, power protection electronics, and high-power motor control.</p>
+    <p>Highlighted below are seven core engineering projects from my current portfolio, spanning UAV systems, embedded hardware, RF-enabled control modules, advanced electric propulsion, power protection electronics, high-power motor control, and energy-harvesting hardware design.</p>
 
     <article class="card project-card">
       <h3>The Caladrius Project (HAVOC-03) — Complete</h3>
@@ -154,6 +154,59 @@
             <li>Stackable connector layout for ESC expansion</li>
             <li>USB-C access for faster firmware bring-up</li>
             <li>Targeted rework path to recover routing issues</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="card project-card drv-project-meta bq-project-meta">
+      <h3>BQ25570 Pendulum Energy Harvester PCB — Complete</h3>
+      <p class="project-subcaption">Configurable energy-harvesting PCB built to rectify multi-coil pendulum-generator inputs, manage low-power startup, and store harvested energy for experimental loads and sensing.</p>
+      <table aria-label="BQ25570 energy harvester project metadata">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Role</th>
+            <th>Tools</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Spring 2026</td>
+            <td>PCB Design Lead</td>
+            <td>KiCad, LTspice, BQ25570</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="drv-project-grid">
+        <div>
+          <h4>Problem / objective</h4>
+          <p>Create a compact board that interfaces multiple pendulum-generator coils, supports configurable series/parallel routing, and converts intermittent low-level AC energy into a usable storage/output path.</p>
+
+          <h4>Your contribution</h4>
+          <p>Owned the architecture, schematic capture, PCB layout, rectifier integration, BQ25570 power stage, connector mapping, component selection, and design iteration for the harvester platform.</p>
+
+          <h4>Design / implementation</h4>
+          <p>Organized six coil channels into a low-loss rectifier front end feeding a BQ25570 harvester stage, storage-capacitor footprint, and output headers. The layout prioritized accessible coil connectors, short power paths, and a test-friendly architecture for comparing coil combinations.</p>
+        </div>
+        <div>
+          <h4>Validation / results</h4>
+          <p>The design consolidated rectification, harvesting, storage, and output routing into a single PCB, reducing off-board wiring and creating a repeatable platform for pendulum-energy experiments and future supercapacitor/load testing.</p>
+
+          <h4>What this project proves</h4>
+          <ul class="drv-bullets">
+            <li>Analog/power PCB design for energy harvesting</li>
+            <li>Configurable multi-input rectifier architecture</li>
+            <li>Experimental hardware iteration and system integration</li>
+          </ul>
+
+          <h4>Key design decisions</h4>
+          <ul class="drv-bullets">
+            <li>Six-input coil interface for configurable routing tests</li>
+            <li>BQ25570-based harvester stage for low-power startup and storage control</li>
+            <li>Connector-first layout for rapid bench iteration</li>
           </ul>
         </div>
       </div>
