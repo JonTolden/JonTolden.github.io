@@ -332,6 +332,45 @@ a.button:hover {
   margin-bottom: 0;
 }
 
+.drv-project-meta table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.25rem;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.drv-project-meta th,
+.drv-project-meta td {
+  padding: 0.5rem 0.65rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.drv-project-meta th {
+  background: rgba(27, 31, 36, 0.1);
+}
+
+.drv-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.drv-project-grid h4 {
+  margin: 0.75rem 0 0.5rem;
+  font-size: 1.05rem;
+  color: #1c3557;
+}
+
+.drv-bullets {
+  margin: 0 0 0.75rem 1.15rem;
+  padding: 0;
+}
+
+.drv-bullets li {
+  margin-bottom: 0.35rem;
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
@@ -435,6 +474,10 @@ a.button:hover {
 }
 
 @media (max-width: 768px) {
+  .drv-project-grid {
+    grid-template-columns: 1fr;
+  }
+
   .timeline-v2::before {
     left: 8px;
   }
