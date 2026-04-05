@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discrete 555 Timer Case Study | Jon Tolden</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="case-study-header">
+    <a href="../index.html" class="text-link">← Back to Portfolio</a>
+    <h1>Discrete Analog BJT-Based 555 Timer</h1>
+    <p>Transistor-level implementation of 555 timing architecture on a manufacturable PCB.</p>
+    <div class="meta-chips"><span>Date: Spring 2026</span><span>Role: Analog / PCB Designer</span><span>Tools: KiCad, LTspice</span><span>Prototype: Through-hole assembly</span><span>Status: Complete</span></div>
+  </header>
+
+  <main class="case-study">
+    <section class="case-section"><h2>Overview</h2><p>Recreated 555 timer behavior using discrete BJTs to demonstrate analog timing fundamentals and validate simulation-to-hardware workflow.</p></section>
+    <section class="case-section"><h2>Objective</h2><p>Replace a monolithic 555 IC with a transistor-level architecture and verify switching/timing behavior on real hardware.</p></section>
+    <section class="case-section"><h2>Role</h2><p>Owned simulation, schematic design, PCB layout, manufacturing handoff, component sourcing, assembly, and final completion.</p></section>
+    <section class="case-section"><h2>Tools</h2><p>LTspice for pre-layout simulation and KiCad for schematic capture and PCB implementation.</p></section>
+    <section class="case-section"><h2>Design / Process</h2><p>Partitioned the circuit into threshold/trigger comparators, flip-flop, output, reset, and discharge stages with labeled board regions for structured testing.</p></section>
+    <section class="case-section"><h2>Images / Renders / Schematics</h2><img class="case-image" src="../STM32 BT Schematic.png" alt="Discrete timer schematic image" /></section>
+    <section class="case-section"><h2>Validation / Testing</h2><p>Validated the design through simulation before fabrication, then completed a full board assembly for hardware-level behavior evaluation. <strong>Bench measurements:</strong> [Add waveform/period data].</p></section>
+    <section class="case-section"><h2>Results</h2><p>Produced a working discrete analog platform suitable for timing study, troubleshooting, and instructional demonstrations.</p></section>
+    <section class="case-section"><h2>Lessons Learned</h2><p>Early simulation and test-point conscious layout decisions reduce bring-up uncertainty in discrete analog PCB projects.</p></section>
+  </main>
+</body>
+</html>
