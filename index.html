@@ -84,7 +84,7 @@
 <!-- Projects showcase -->
   <section id="projects" class="card" data-aos="fade-up">
     <h2>Projects</h2>
-    <p>Highlighted below are seven core engineering projects from my current portfolio, spanning UAV systems, embedded hardware, RF-enabled control modules, advanced electric propulsion, power protection electronics, high-power motor control, and energy-harvesting hardware design.</p>
+    <p>Highlighted below are eight core engineering projects from my current portfolio, spanning UAV systems, embedded hardware, RF-enabled control modules, discrete analog timing hardware, advanced electric propulsion, power protection electronics, high-power motor control, and energy-harvesting hardware design.</p>
 
     <article class="card project-card">
       <h3>The Caladrius Project (HAVOC-03) — Complete</h3>
@@ -161,6 +161,65 @@
 
 
 
+
+    <div class="card project-card drv-project-meta timer555-project-meta">
+      <h3>Discrete Analog BJT-Based 555 Timer — Complete</h3>
+      <p class="project-subcaption">Fully assembled discrete-component implementation of the 555 timer architecture, recreated at the transistor level to demonstrate analog timing behavior without an integrated timer IC.</p>
+      <table aria-label="Discrete analog BJT-based 555 timer project metadata">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Role</th>
+            <th>Tools</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Spring 2026</td>
+            <td>Analog / PCB Designer</td>
+            <td>KiCad, LTspice</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="drv-project-grid">
+        <div>
+          <h4>Problem / objective</h4>
+          <p>Recreate the core 555 timer architecture as a manufacturable transistor-level PCB and validate switching and timing behavior using discrete BJTs instead of a monolithic 555 IC.</p>
+
+          <h4>Your contribution</h4>
+          <p>Owned schematic design, LTspice simulation, PCB layout, manufacturing handoff, component sourcing, through-hole solder assembly, and final hardware completion.</p>
+
+          <h4>Design / implementation</h4>
+          <p>Partitioned the design into threshold and trigger comparators, flip-flop, output, reset, and discharge sections using discrete BJTs and passive components. The PCB was organized into labeled functional regions with accessible I/O nodes for simulation correlation, bench bring-up, and instruction-friendly debugging.</p>
+
+          <h4>Validation / results</h4>
+          <p>The board was fabricated and fully assembled, creating a working hardware platform for studying transistor-level 555 behavior and analog timing principles. The project validated a simulation-driven discrete analog workflow from concept through hardware execution.</p>
+        </div>
+        <div>
+          <h4>What this project proves</h4>
+          <ul class="drv-bullets">
+            <li>Transistor-level analog circuit design</li>
+            <li>LTspice-to-hardware workflow and validation</li>
+            <li>PCB implementation of discrete mixed-stage analog logic</li>
+          </ul>
+
+          <h4>Project highlights</h4>
+          <ul class="drv-bullets">
+            <li>Discrete transistor-level 555 implementation</li>
+            <li>LTspice plus hardware verification</li>
+            <li>Fully assembled PCBA</li>
+          </ul>
+
+          <h4>Key design decisions</h4>
+          <ul class="drv-bullets">
+            <li>Implemented the 555 using discrete BJTs rather than an integrated timer IC</li>
+            <li>Used LTspice before fabrication to de-risk switching and timing behavior</li>
+            <li>Labeled board regions and I/O nodes for easier bench testing and instructional clarity</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <div class="card project-card drv-project-meta bq-project-meta">
       <h3>BQ25570 Pendulum Energy Harvester PCB — Complete</h3>
       <p class="project-subcaption">Configurable energy-harvesting PCB built to rectify multi-coil pendulum-generator inputs, manage low-power startup, and store harvested energy for experimental loads and sensing.</p>
@@ -217,10 +276,62 @@
       <p>Collaborating on a high-torque, high-efficiency axial flux motor architecture for EV and UAV propulsion. Work includes iterative electromagnetic and thermal simulation (EMWorks, Elmer, FEMM, SimScale), rotor-stator optimization, and validation of scalable multi-rotor geometry for improved power density.</p>
     </div>
 
-    <div class="card project-card">
+    <div class="card project-card drv-project-meta">
       <h3>DRV Power Protection &amp; Monitoring PCB — Complete</h3>
-      <p>Designed a custom 4-layer inline board for 8S DRV motor-control systems to improve protection, sensing access, and serviceability during bring-up and hardware testing. The architecture supports connectorized battery/current/temperature monitoring, high-current routing with thermal separation, and reusable inline fault-isolation for bench validation workflows.</p>
-      <p><strong>Project highlights:</strong> 4-layer board, up to 8S lithium support, connectorized sensing points, and service-oriented inline architecture for faster bench validation and fault isolation.</p>
+      <p class="project-subcaption">Custom 4-layer inline board built to improve protection, sensing access, and serviceability for 8S DRV motor-control bring-up and fault-isolation workflows.</p>
+      <table aria-label="DRV power protection and monitoring project metadata">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Role</th>
+            <th>Tools</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Spring 2026</td>
+            <td>Power / PCB Designer</td>
+            <td>KiCad, 4-Layer PCB, Bench Validation</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="drv-project-grid">
+        <div>
+          <h4>Problem / objective</h4>
+          <p>Create a reusable inline board for DRV motor-control systems that improves power-path protection, exposes sensing nodes, and speeds bring-up/debug without repeatedly reworking the main controller board.</p>
+
+          <h4>Your contribution</h4>
+          <p>Owned system architecture, schematic capture, 4-layer PCB layout, connector and sense-path planning, and bench-oriented design choices focused on serviceability and rapid fault isolation.</p>
+
+          <h4>Design / implementation</h4>
+          <p>Implemented an inline architecture with connectorized battery/current/temperature monitoring points, high-current routing with thermal-aware region separation, and structured access to critical nodes for repeatable diagnostics.</p>
+
+          <h4>Validation / results</h4>
+          <p>The board established a service-oriented hardware layer for DRV testing workflows, reducing ad-hoc wiring and improving repeatability during bench validation and protection troubleshooting.</p>
+        </div>
+        <div>
+          <h4>What this project proves</h4>
+          <ul class="drv-bullets">
+            <li>Power electronics protection and monitoring design</li>
+            <li>4-layer high-current PCB layout and thermal planning</li>
+            <li>Bench-serviceable architecture for faster debug cycles</li>
+          </ul>
+
+          <h4>Project highlights</h4>
+          <ul class="drv-bullets">
+            <li>4-layer inline board architecture</li>
+            <li>Up to 8S lithium system support</li>
+            <li>Connectorized sensing and fault-isolation points</li>
+          </ul>
+
+          <h4>Key design decisions</h4>
+          <ul class="drv-bullets">
+            <li>Inline form factor to preserve the main controller while adding test/protection capability</li>
+            <li>Connector-first sensing layout for battery, current, and temperature access</li>
+            <li>Thermal-separated high-current routing to improve reliability during high-load testing</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="card project-card">
