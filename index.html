@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Top</button>
+  <button class="back-to-top" aria-label="Back to top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Top</button>
 
   <header class="hero" id="top">
     <div class="hero-inner">
@@ -341,5 +341,19 @@
   <footer>
     <p>© 2026 Jon Tolden | Electrical Engineering Portfolio</p>
   </footer>
+  <script>
+    const backToTopButton = document.querySelector(".back-to-top");
+
+    if (backToTopButton) {
+      const updateBackToTopVisibility = () => {
+        const scrollThreshold = window.innerWidth <= 640 ? 820 : 500;
+        backToTopButton.classList.toggle("is-visible", window.scrollY > scrollThreshold);
+      };
+
+      window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+      window.addEventListener("resize", updateBackToTopVisibility);
+      updateBackToTopVisibility();
+    }
+  </script>
 </body>
 </html>
