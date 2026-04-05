@@ -7,6 +7,9 @@
   <meta name="description" content="Jon Tolden electrical engineering portfolio focused on PCB design, embedded systems, avionics, RF/wireless integration, and power electronics." />
   <meta name="keywords" content="Jon Tolden, Electrical Engineering, PCB Design, Embedded Systems, Avionics, RF Wireless, Power Electronics, Electronics Hardware" />
   <meta name="author" content="Jon Tolden" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -19,12 +22,14 @@
       <p class="hero-headline">Electrical Engineering Candidate for PCB Design, Embedded Systems, Avionics, RF/Wireless, and Power Electronics Roles</p>
       <p class="hero-subheadline">U.S. Army UAS veteran transitioning into full-time electronics hardware engineering with hands-on design, integration, bring-up, and validation experience.</p>
       <div class="hero-ctas">
-        <a class="button button-primary" href="Resume_July2025.pdf" target="_blank">View Resume</a>
+        <a class="button button-primary" href="resume.html">View Resume</a>
         <a class="button button-secondary" href="#featured-projects">See Projects</a>
         <a class="button button-secondary" href="#contact">Contact</a>
       </div>
     </div>
-    <img src="Tolden_Headshot_2.jpg" alt="Jon Tolden headshot" class="hero-headshot" loading="lazy" />
+    <div class="headshot-frame">
+      <img src="Tolden_Headshot_2.jpg" alt="Jon Tolden headshot" class="hero-headshot" loading="lazy" />
+    </div>
   </header>
 
   <nav>
@@ -49,7 +54,7 @@
           <div class="project-preview-content">
             <h3>The Caladrius Project (HAVOC-03)</h3>
             <p class="value-line">Built a flight-ready long-endurance UAV in a 10-week RDT&amp;E cycle to accelerate mission-capable avionics and systems integration.</p>
-            <p class="tools-line"><strong>Tools:</strong> CAD, FEA, Avionics Architecture, ML Integration</p>
+            <p class="tools-line">CAD, FEA, Avionics Architecture, ML Integration</p>
             <a class="text-link" href="projects/caladrius.html">View Project →</a>
           </div>
         </article>
@@ -59,7 +64,7 @@
           <div class="project-preview-content">
             <h3>Stackable ESP32 RF Communication Module</h3>
             <p class="value-line">Designed a stackable RF control board that added wireless control and board-to-board communication to an ESC platform.</p>
-            <p class="tools-line"><strong>Tools:</strong> KiCad, ESP32, Arduino IDE</p>
+            <p class="tools-line">KiCad, ESP32, Arduino IDE</p>
             <a class="text-link" href="projects/esp32-rf-module.html">View Project →</a>
           </div>
         </article>
@@ -69,7 +74,7 @@
           <div class="project-preview-content">
             <h3>DRV Power Protection &amp; Monitoring PCB</h3>
             <p class="value-line">Engineered a 4-layer inline protection board to improve 8S motor-control bring-up speed, sensing visibility, and debug repeatability.</p>
-            <p class="tools-line"><strong>Tools:</strong> KiCad, 4-Layer PCB Layout, Bench Validation</p>
+            <p class="tools-line">KiCad, 4-Layer PCB Layout, Bench Validation</p>
             <a class="text-link" href="projects/drv-power-protection.html">View Project →</a>
           </div>
         </article>
@@ -141,23 +146,23 @@
 
     <section id="projects" class="card">
       <div class="section-header">
-        <h2>Project Portfolio</h2>
-        <p>Homepage summaries are intentionally concise; each project links to a full case study.</p>
+        <h2>All Projects</h2>
+        <p>Concise homepage highlights with full engineering details in each project case study.</p>
       </div>
 
       <div class="project-list">
         <article class="project-summary">
           <img src="TCP Image 2.PNG" alt="Caladrius UAV engineering image" loading="lazy" />
-          <div>
+          <div class="project-summary-content">
             <h3>The Caladrius Project (HAVOC-03)</h3>
             <div class="meta-chips">
-              <span>Date: May-Nov 2025</span><span>Role: Engineering Project Manager Intern</span><span>Team: 25 members</span><span>Duration: 10 weeks</span><span>Status: Complete</span>
+              <span>Date: May-Nov 2025</span><span>Role: Engineering Project Manager Intern</span><span>Tools: CAD + FEA + Avionics Integration</span><span>Status: Complete</span>
             </div>
             <p class="opening">Built a long-endurance fixed-wing UAV to rapidly field a modular, mission-adaptable platform during a compressed RDT&amp;E schedule.</p>
             <ul>
-              <li>Led interdisciplinary technical coordination across mechanical, avionics, and autonomy workstreams.</li>
-              <li>Contributed CAD and FEA-informed design decisions for structural and system integration.</li>
-              <li>Delivered a flight-ready platform suitable for iterative mission profile development.</li>
+              <li>Led interdisciplinary coordination across mechanical, avionics, and autonomy workstreams.</li>
+              <li>Contributed CAD and FEA-informed decisions for structural and system integration.</li>
+              <li>Delivered a flight-ready platform for iterative mission profile development.</li>
             </ul>
             <a class="text-link" href="projects/caladrius.html">View Project Details →</a>
           </div>
@@ -165,10 +170,10 @@
 
         <article class="project-summary">
           <img src="STM32 BT 3D PCB.png" alt="ESP32 stackable module render" loading="lazy" />
-          <div>
+          <div class="project-summary-content">
             <h3>Stackable ESP32 RF Communication Module for ESC Systems</h3>
             <div class="meta-chips">
-              <span>Date: Spring 2026</span><span>Role: PCB Design Lead</span><span>Tools: KiCad, ESP32, Arduino IDE</span><span>Wireless: Enabled</span><span>Status: Complete</span>
+              <span>Date: Spring 2026</span><span>Role: PCB Design Lead</span><span>Tools: KiCad, ESP32, Arduino IDE</span><span>Status: Complete</span>
             </div>
             <p class="opening">Designed and built a stackable ESP32 PCB that solved wireless control and expansion limitations in an ESC senior-design platform.</p>
             <ul>
@@ -182,16 +187,16 @@
 
         <article class="project-summary">
           <img src="STM32 BT Schematic.png" alt="Discrete 555 timer schematic representation" loading="lazy" />
-          <div>
+          <div class="project-summary-content">
             <h3>Discrete Analog BJT-Based 555 Timer</h3>
             <div class="meta-chips">
-              <span>Date: Spring 2026</span><span>Role: Analog / PCB Designer</span><span>Tools: KiCad, LTspice</span><span>Board Type: Through-hole prototype</span><span>Status: Complete</span>
+              <span>Date: Spring 2026</span><span>Role: Analog / PCB Designer</span><span>Tools: KiCad, LTspice</span><span>Board Type: Through-hole Prototype</span>
             </div>
             <p class="opening">Implemented a discrete transistor-level 555 timer to validate analog timing behavior without relying on an integrated timer IC.</p>
             <ul>
               <li>Designed comparator, flip-flop, output, reset, and discharge stages with discrete BJTs.</li>
-              <li>Performed LTspice simulation before fabrication to de-risk switching/timing behavior.</li>
-              <li>Assembled and validated a complete teaching and test platform for analog fundamentals.</li>
+              <li>Performed LTspice simulation before fabrication to de-risk switching and timing behavior.</li>
+              <li>Assembled and validated a full teaching and test platform for analog fundamentals.</li>
             </ul>
             <a class="text-link" href="projects/discrete-555-timer.html">View Project Details →</a>
           </div>
@@ -199,16 +204,16 @@
 
         <article class="project-summary">
           <img src="TCP Image 5.jpg" alt="Energy harvesting hardware image" loading="lazy" />
-          <div>
+          <div class="project-summary-content">
             <h3>BQ25570 Pendulum Energy Harvester PCB</h3>
             <div class="meta-chips">
-              <span>Date: Spring 2026</span><span>Role: PCB Design Lead</span><span>Tools: KiCad, LTspice, BQ25570</span><span>Inputs: 6 coil channels</span><span>Status: Complete</span>
+              <span>Date: Spring 2026</span><span>Role: PCB Design Lead</span><span>Tools: KiCad, LTspice, BQ25570</span><span>Status: Complete</span>
             </div>
             <p class="opening">Developed a configurable energy-harvesting PCB to convert low-level, intermittent multi-coil AC input into a usable storage/output pathway.</p>
             <ul>
               <li>Integrated rectification, harvesting, storage, and output routing into one board.</li>
               <li>Enabled series/parallel channel experimentation with connectorized input architecture.</li>
-              <li>Created a repeatable bench platform for future load and supercapacitor testing.</li>
+              <li>Built a repeatable bench platform for future load and supercapacitor testing.</li>
             </ul>
             <a class="text-link" href="projects/bq25570-harvester.html">View Project Details →</a>
           </div>
@@ -216,15 +221,15 @@
 
         <article class="project-summary">
           <img src="TCP Image 4.jpg" alt="Power protection board development image" loading="lazy" />
-          <div>
+          <div class="project-summary-content">
             <h3>DRV Power Protection &amp; Monitoring PCB</h3>
             <div class="meta-chips">
-              <span>Date: Spring 2026</span><span>Role: Power / PCB Designer</span><span>Tools: KiCad, Bench Validation</span><span>Board: 4-layer inline</span><span>Status: Complete</span>
+              <span>Date: Spring 2026</span><span>Role: Power / PCB Designer</span><span>Tools: KiCad, Bench Validation</span><span>Board Type: 4-Layer Inline</span>
             </div>
             <p class="opening">Engineered an inline 4-layer board that solved protection and sensing-access bottlenecks during high-current DRV motor-control bring-up.</p>
             <ul>
               <li>Architected connectorized battery, current, and temperature monitoring points.</li>
-              <li>Separated thermal/high-current regions to improve bench reliability.</li>
+              <li>Separated thermal and high-current regions to improve bench reliability.</li>
               <li>Reduced ad-hoc wiring and improved repeatability for debug and fault isolation.</li>
             </ul>
             <a class="text-link" href="projects/drv-power-protection.html">View Project Details →</a>
@@ -233,10 +238,10 @@
 
         <article class="project-summary">
           <img src="TCP Image 6.jpg" alt="Axial flux motor concept image" loading="lazy" />
-          <div>
+          <div class="project-summary-content">
             <h3>Multi-Rotor Axial Flux Motor</h3>
             <div class="meta-chips">
-              <span>Date: 2026-Present</span><span>Role: Electrical Engineer</span><span>Tools: EMWorks, Elmer, FEMM, SimScale</span><span>Prototype Status: In progress</span><span>Test Status: [Add latest data]</span>
+              <span>Date: 2026-Present</span><span>Role: Electrical Engineer</span><span>Tools: EMWorks, Elmer, FEMM, SimScale</span><span>Status: In Progress</span>
             </div>
             <p class="opening">Developing a multi-rotor axial-flux architecture to improve torque density and efficiency for EV and UAV propulsion use cases.</p>
             <ul>
@@ -254,15 +259,14 @@
       <h2>Interested in my hardware engineering work?</h2>
       <p>I am actively pursuing full-time electrical engineering opportunities in electronics hardware, PCB design, avionics, embedded systems, RF/wireless, and power electronics.</p>
       <div class="hero-ctas">
-        <a class="button button-primary" href="Resume_July2025.pdf" target="_blank">View Resume</a>
+        <a class="button button-primary" href="resume.html">View Resume</a>
         <a class="button button-secondary" href="#contact">Contact Jon</a>
       </div>
     </section>
 
     <section id="about" class="card">
       <h2>About</h2>
-      <p>I am a U.S. Army veteran and senior-year electrical engineering candidate focused on building reliable, testable electronics for aerospace and high-performance systems.</p>
-      <p>My background combines mission-driven discipline from MQ-1C UAS operations with hands-on hardware development across avionics, RF modules, embedded boards, and power electronics prototypes.</p>
+      <p>I am a U.S. Army veteran and senior-year electrical engineering candidate building reliable, testable electronics for aerospace and other high-performance systems through hands-on PCB design, integration, and validation.</p>
       <details>
         <summary>Read More: Military-to-Engineering Transition</summary>
         <p>I served as an MQ-1C Gray Eagle operator, where mission outcomes depended on technical reliability, team coordination, and operational discipline. That experience pushed me to understand the engineering behind the systems I trusted in the field.</p>
@@ -272,42 +276,60 @@
 
     <section id="timeline" class="card">
       <h2>Career Timeline</h2>
-      <div class="timeline-columns">
-        <div>
+      <div class="timeline-layout">
+        <div class="timeline-primary">
           <h3>Confirmed Experience</h3>
-          <ul class="timeline-list">
-            <li><strong>2016-2022:</strong> MQ-1C UAS Operator, U.S. Army</li>
-            <li><strong>2022-2023:</strong> GPR Analyst, Penhall Technologies</li>
-            <li><strong>2023-Present:</strong> Electrical Engineer, Flux Speed Inc.</li>
-            <li><strong>2023-Present:</strong> UAS Advisor, American Tenet Inc.</li>
-            <li><strong>May 2025-Nov 2025:</strong> Engineering Project Manager Intern, American Tenet Inc. (HAVOC-03)</li>
-          </ul>
+          <ol class="timeline-list confirmed">
+            <li><strong>2016-2022</strong><span>MQ-1C UAS Operator, U.S. Army</span></li>
+            <li><strong>2022-2023</strong><span>GPR Analyst, Penhall Technologies</span></li>
+            <li><strong>2023-Present</strong><span>Electrical Engineer, Flux Speed Inc.</span></li>
+            <li><strong>2023-Present</strong><span>UAS Advisor, American Tenet Inc.</span></li>
+            <li><strong>May 2025-Nov 2025</strong><span>Engineering Project Manager Intern, American Tenet Inc. (HAVOC-03)</span></li>
+          </ol>
         </div>
-        <div>
-          <h3>Next Steps (Planned)</h3>
-          <ul class="timeline-list">
-            <li><strong>2026:</strong> Continue expanding embedded, RF, and power-electronics project depth.</li>
-            <li><strong>2027 (Target):</strong> Complete B.S. in Electrical Engineering, California State University, Long Beach.</li>
-            <li><strong>Near Term:</strong> Begin full-time role in electronics hardware, PCB, avionics, or embedded systems engineering.</li>
+        <aside class="timeline-secondary">
+          <h3>Next Steps</h3>
+          <ul class="timeline-list planned">
+            <li><strong>2026:</strong> Expand embedded, RF, and power-electronics project depth.</li>
+            <li><strong>2027 (Target):</strong> Complete B.S. in Electrical Engineering at California State University, Long Beach.</li>
+            <li><strong>Near Term:</strong> Begin a full-time role in electronics hardware, PCB, avionics, or embedded systems engineering.</li>
           </ul>
-        </div>
+        </aside>
       </div>
     </section>
 
-    <section id="resume" class="card">
-      <h2>Resume</h2>
-      <p>Download or review my current resume below.</p>
-      <a href="Resume_July2025.pdf" target="_blank" class="button button-primary">Download Resume (PDF)</a>
-      <iframe src="Resume_July2025.pdf" width="100%" height="600" style="border:none; margin-top:1rem;" title="Jon Tolden Resume"></iframe>
+    <section id="resume" class="card resume-card">
+      <div>
+        <h2>Resume</h2>
+        <p>Quick summary view for recruiters. Open the full resume for complete project history, technical scope, and experience details.</p>
+        <div class="hero-ctas">
+          <a href="resume.html" class="button button-primary">View Resume</a>
+          <a href="Resume_July2025.pdf" target="_blank" class="button button-ghost">Download PDF</a>
+        </div>
+      </div>
+      <a href="resume.html" class="resume-preview" aria-label="Open resume page">
+        <div class="resume-preview-inner">
+          <p class="resume-label">Jon Tolden · Electrical Engineering Resume</p>
+          <h3>PCB · Embedded · Avionics · RF · Power</h3>
+          <ul>
+            <li>U.S. Army UAS veteran with mission-critical operations background</li>
+            <li>Hands-on PCB design, bring-up, and validation portfolio</li>
+            <li>Seeking full-time hardware engineering role</li>
+          </ul>
+          <span class="resume-preview-link">Open Full Resume →</span>
+        </div>
+      </a>
     </section>
 
     <section id="contact" class="card contact-box">
       <h2>Contact</h2>
       <p class="contact-priority"><strong>Actively seeking full-time electrical engineering roles</strong> in electronics hardware, PCB design, avionics, embedded systems, RF/wireless systems, and power electronics.</p>
-      <p><strong>Email:</strong> <a href="mailto:jon.a.tolden@gmail.com">jon.a.tolden@gmail.com</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+17142932180">(714) 293-2180</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jontolden" target="_blank">linkedin.com/in/jontolden</a></p>
-      <p><strong>Location:</strong> Long Beach, CA (Pacific Time)</p>
+      <div class="contact-grid">
+        <p><strong>Email</strong><a href="mailto:jon.a.tolden@gmail.com">jon.a.tolden@gmail.com</a></p>
+        <p><strong>Phone</strong><a href="tel:+17142932180">(714) 293-2180</a></p>
+        <p><strong>LinkedIn</strong><a href="https://linkedin.com/in/jontolden" target="_blank">linkedin.com/in/jontolden</a></p>
+        <p><strong>Location</strong><span>Long Beach, CA (Pacific Time)</span></p>
+      </div>
       <p class="secondary-interest"><strong>Secondary availability:</strong> UAS advisory, consulting, and freelance PCB support engagements.</p>
     </section>
   </main>
