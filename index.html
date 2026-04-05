@@ -1,509 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Page metadata and external stylesheets -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jon Tolden | Electrical Engineer</title>
-  <meta name="description" content="Jon Tolden | US Army Veteran | Electrical Engineer" />
-  <meta name="keywords" content="Electrical Engineer, UAV, EV, Jon Tolden, Power Electronics, Embedded Systems" />
+  <title>Jon Tolden | Electrical Engineering Portfolio</title>
+  <meta name="description" content="Jon Tolden electrical engineering portfolio focused on PCB design, embedded systems, avionics, RF/wireless integration, and power electronics." />
+  <meta name="keywords" content="Jon Tolden, Electrical Engineering, PCB Design, Embedded Systems, Avionics, RF Wireless, Power Electronics, Electronics Hardware" />
   <meta name="author" content="Jon Tolden" />
-  <link rel="icon" type="image/png" href="favicon.png" />
-
-  <!-- Fonts and third‑party libraries -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Top</button>
 
-  <!-- Initialize AOS animations and typing effect -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    AOS.init({ duration: 1000, once: true });
-
-    new Typed(".typewriter", {
-      strings: ["Veteran", "Electrical Engineer", "UAS Professional", "EV Motor Designer", "Energy Systems Innovator"],
-      typeSpeed: 50,
-      backSpeed: 25,
-      loop: true,
-      backDelay: 1200
-    });
-  });
-</script>
-
-<!-- Back to top shortcut -->
-<button class="back-to-top" data-aos="zoom-in" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Top</button>
-
-<!-- Hero header with typing animation -->
-<header class="hero" data-aos="fade-down">
-  <h1 data-aos="fade-down">Jon Tolden</h1>
-  <img src="Tolden_Headshot_2.jpg" alt="Jon Tolden Headshot" data-aos="fade-up"/>
-  <p data-aos="fade-up" data-aos-delay="100"><span class="typewriter">&nbsp;</span></p>
-  <p class="subtitle" data-aos="fade-up" data-aos-delay="200"><span class="highlight">Engineering systems that fly, drive, and endure.</span></p>
-</header>
-
-<!-- Site navigation -->
-<nav data-aos="fade-down" data-aos-delay="50">
-  <a href="#about">About</a>
-  <a href="#mystory">My Story</a>
-  <a href="#timeline-graphic">Timeline</a>
-  <a href="#projects">Projects</a>
-  <a href="#resume">Resume</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<!-- ===== Main content sections ===== -->
-
-  <!-- About section -->
-<section id="about" class="card" data-aos="fade-up">
-  <h2>About</h2>
-  <p>This portfolio website highlights my path from U.S. Army MQ-1C UAS Operator to Electrical Engineer, blending hands-on projects with personal passion. It captures past achievements while presenting a forward-looking vision for innovation in aerospace, power systems, and emerging technologies.</p>
-</section>
-
-<!-- My story and collage -->
-<section id="mystory" class="card" data-aos="fade-up">
-  <h2>My Story</h2>
-  <p>My journey began in the military, where I served as an MQ-1C Gray Eagle operator. I wasn’t just flying drones; I was part of a team where mission success depended on trust, timing, and technology working in harmony. During that time, I worked alongside engineers who spoke the language of circuits and systems. I found myself wanting to understand the "why" behind the machines we relied on.</p>
-
-  <div class="collage">
-    <img src="My_Story_1.jpg" alt="My Story photo 1" class="floater" loading="lazy" />
-    <img src="My_Story_2.jpg" alt="My Story photo 2" class="floater" loading="lazy" />
-    <img src="My_Story_3.jpg" alt="My Story photo 3" class="floater" loading="lazy" />
-    <img src="My_Story_4.jpg" alt="My Story photo 4" class="floater" loading="lazy" />
-    <img src="My_Story_5.jpg" alt="My Story photo 5" class="floater" loading="lazy" />
-    <img src="My_Story_6.jpg" alt="My Story photo 6" class="floater" loading="lazy" />
-  </div>
-  <!-- End collage -->
-
-  <p>After leaving the Army, I pursued electrical engineering to follow that interest. The shift from deployment zones to classrooms wasn’t always easy, but every circuit, simulation, and design project gave me a clearer sense of purpose. Engineering became more than a degree; it became a way to grow, solve meaningful problems, and apply the same discipline I carried in the military to creating technology that makes a difference.</p>
-</section>
-
-<!-- Projects showcase -->
-  <section id="projects" class="card" data-aos="fade-up">
-    <h2>Projects</h2>
-    <p>Highlighted below are six core engineering projects from my current portfolio, spanning UAV systems, RF-enabled control modules, discrete analog timing hardware, advanced electric propulsion, power protection electronics, and energy-harvesting hardware design.</p>
-
-    <article class="card project-card">
-      <h3>The Caladrius Project (HAVOC-03) — Complete</h3>
-      <p>Developed a long-endurance fixed-wing UAV during a 10-week rapid RDT&amp;E cycle with a 25-member interdisciplinary team. My contribution focused on CAD, FEA, avionics architecture, and ML-enabled autonomy integration, resulting in a modular, flight-ready platform designed for adaptable mission profiles.</p>
-      <div class="project-collage-grid">
-        <img src="TCP Image 1.jpg" alt="Caladrius image 1" loading="lazy" />
-        <img src="TCP Image 2.PNG" alt="Caladrius image 2" loading="lazy" />
-        <img src="TCP Image 3.JPG" alt="Caladrius image 3" loading="lazy" />
-        <img src="TCP Image 4.jpg" alt="Caladrius image 4" loading="lazy" />
-        <img src="TCP Image 5.jpg" alt="Caladrius image 5" loading="lazy" />
-        <img src="TCP Image 6.jpg" alt="Caladrius image 6" loading="lazy" />
-      </div>
-    </article>
-
-    <div class="card project-card drv-project-meta">
-      <h3>Stackable ESP32 RF Communication Module for ESC Systems — Complete</h3>
-      <p class="project-subcaption">Compact add-on PCB built to add wireless control, board-to-board communication, and telemetry-ready expansion to a senior-design ESC platform.</p>
-      <table aria-label="ESP32 RF module project metadata">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Role</th>
-            <th>Tools</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Spring 2026</td>
-            <td>PCB Design Lead</td>
-            <td>KiCad, ESP32, Arduino IDE</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="drv-project-grid">
-        <div>
-          <h4>Problem / objective</h4>
-          <p>Create a stackable ESP32 module that adds wireless joystick reception and control/data exchange to the ESC system without redesigning the main board.</p>
-
-          <h4>Your contribution</h4>
-          <p>Owned schematic capture, PCB layout, connector mapping, assembly, programming/bring-up, debugging, manual rework, and wireless/system validation.</p>
-
-          <h4>Design / implementation</h4>
-          <p>Built around an ESP32 with stackable headers, USB-C access, and board-to-board connectors for remote control and future telemetry. The layout prioritized RF-module placement, connector access, and rework-friendly routing for fast bring-up.</p>
-        </div>
-        <div>
-          <h4>Validation / results</h4>
-          <p>Board was fabricated, assembled, programmed, wirelessly tested, integrated with joystick control, and exercised with the larger motor-control system. USB data routing was recovered by direct jumper wiring from the ESP32 pins, and a redundant reverse-polarity MOSFET path was removed and replaced with a solder bridge.</p>
-
-          <h4>What this project proves</h4>
-          <ul class="drv-bullets">
-            <li>Embedded/RF hardware integration</li>
-            <li>Modular stackable PCB architecture</li>
-            <li>Bring-up, rework, and system troubleshooting</li>
-          </ul>
-
-          <h4>Key design decisions</h4>
-          <ul class="drv-bullets">
-            <li>Stackable connector layout for ESC expansion</li>
-            <li>USB-C access for faster firmware bring-up</li>
-            <li>Targeted rework path to recover routing issues</li>
-          </ul>
-        </div>
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <p class="eyebrow">Electrical Engineering Portfolio</p>
+      <h1>Jon Tolden</h1>
+      <p class="hero-headline">Electrical Engineering Candidate for PCB Design, Embedded Systems, Avionics, RF/Wireless, and Power Electronics Roles</p>
+      <p class="hero-subheadline">U.S. Army UAS veteran transitioning into full-time electronics hardware engineering with hands-on design, integration, bring-up, and validation experience.</p>
+      <div class="hero-ctas">
+        <a class="button button-primary" href="Resume_July2025.pdf" target="_blank">View Resume</a>
+        <a class="button button-secondary" href="#featured-projects">See Projects</a>
+        <a class="button button-secondary" href="#contact">Contact</a>
       </div>
     </div>
+    <img src="Tolden_Headshot_2.jpg" alt="Jon Tolden headshot" class="hero-headshot" loading="lazy" />
+  </header>
 
+  <nav>
+    <a href="#featured-projects">Featured Projects</a>
+    <a href="#skills">Skills &amp; Tools</a>
+    <a href="#projects">All Projects</a>
+    <a href="#about">About</a>
+    <a href="#timeline">Experience</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
+  <main>
+    <section id="featured-projects" class="card">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>Technical proof points for avionics, embedded hardware, and power-focused PCB engineering.</p>
+      </div>
+      <div class="project-preview-grid">
+        <article class="project-preview">
+          <img src="TCP Image 1.jpg" alt="Caladrius UAV project" loading="lazy" />
+          <div class="project-preview-content">
+            <h3>The Caladrius Project (HAVOC-03)</h3>
+            <p class="value-line">Built a flight-ready long-endurance UAV in a 10-week RDT&amp;E cycle to accelerate mission-capable avionics and systems integration.</p>
+            <p class="tools-line"><strong>Tools:</strong> CAD, FEA, Avionics Architecture, ML Integration</p>
+            <a class="text-link" href="projects/caladrius.html">View Project →</a>
+          </div>
+        </article>
 
+        <article class="project-preview">
+          <img src="STM32 BT 3D PCB.png" alt="ESP32 RF module PCB render" loading="lazy" />
+          <div class="project-preview-content">
+            <h3>Stackable ESP32 RF Communication Module</h3>
+            <p class="value-line">Designed a stackable RF control board that added wireless control and board-to-board communication to an ESC platform.</p>
+            <p class="tools-line"><strong>Tools:</strong> KiCad, ESP32, Arduino IDE</p>
+            <a class="text-link" href="projects/esp32-rf-module.html">View Project →</a>
+          </div>
+        </article>
 
-    <div class="card project-card drv-project-meta timer555-project-meta">
-      <h3>Discrete Analog BJT-Based 555 Timer — Complete</h3>
-      <p class="project-subcaption">Fully assembled discrete-component implementation of the 555 timer architecture, recreated at the transistor level to demonstrate analog timing behavior without an integrated timer IC.</p>
-      <table aria-label="Discrete analog BJT-based 555 timer project metadata">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Role</th>
-            <th>Tools</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Spring 2026</td>
-            <td>Analog / PCB Designer</td>
-            <td>KiCad, LTspice</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="drv-project-grid">
-        <div>
-          <h4>Problem / objective</h4>
-          <p>Recreate the core 555 timer architecture as a manufacturable transistor-level PCB and validate switching and timing behavior using discrete BJTs instead of a monolithic 555 IC.</p>
+        <article class="project-preview">
+          <img src="STM32 BT Schematic.png" alt="DRV power board schematic" loading="lazy" />
+          <div class="project-preview-content">
+            <h3>DRV Power Protection &amp; Monitoring PCB</h3>
+            <p class="value-line">Engineered a 4-layer inline protection board to improve 8S motor-control bring-up speed, sensing visibility, and debug repeatability.</p>
+            <p class="tools-line"><strong>Tools:</strong> KiCad, 4-Layer PCB Layout, Bench Validation</p>
+            <a class="text-link" href="projects/drv-power-protection.html">View Project →</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-          <h4>Your contribution</h4>
-          <p>Owned schematic design, LTspice simulation, PCB layout, manufacturing handoff, component sourcing, through-hole solder assembly, and final hardware completion.</p>
-
-          <h4>Design / implementation</h4>
-          <p>Partitioned the design into threshold and trigger comparators, flip-flop, output, reset, and discharge sections using discrete BJTs and passive components. The PCB was organized into labeled functional regions with accessible I/O nodes for simulation correlation, bench bring-up, and instruction-friendly debugging.</p>
-
-          <h4>Validation / results</h4>
-          <p>The board was fabricated and fully assembled, creating a working hardware platform for studying transistor-level 555 behavior and analog timing principles. The project validated a simulation-driven discrete analog workflow from concept through hardware execution.</p>
+    <section id="skills" class="card">
+      <div class="section-header">
+        <h2>Skills &amp; Tools</h2>
+        <p>Organized for recruiter scanability across core hardware engineering domains.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>PCB Design</h3>
+          <ul>
+            <li>Multi-layer layout (up to 4 layers)</li>
+            <li>Connector-first board architecture</li>
+            <li>Power-path and sensing integration</li>
+            <li>Design for bring-up and rework</li>
+          </ul>
         </div>
-        <div>
-          <h4>What this project proves</h4>
-          <ul class="drv-bullets">
-            <li>Transistor-level analog circuit design</li>
-            <li>LTspice-to-hardware workflow and validation</li>
-            <li>PCB implementation of discrete mixed-stage analog logic</li>
+        <div class="skill-group">
+          <h3>Embedded Systems</h3>
+          <ul>
+            <li>ESP32 hardware integration</li>
+            <li>Firmware bring-up and debugging</li>
+            <li>Board-to-board interface design</li>
+            <li>USB-C programming access</li>
           </ul>
-
-          <h4>Project highlights</h4>
-          <ul class="drv-bullets">
-            <li>Discrete transistor-level 555 implementation</li>
-            <li>LTspice plus hardware verification</li>
-            <li>Fully assembled PCBA</li>
+        </div>
+        <div class="skill-group">
+          <h3>RF / Wireless</h3>
+          <ul>
+            <li>Wireless joystick control links</li>
+            <li>RF module placement considerations</li>
+            <li>Telemetry-ready hardware planning</li>
+            <li>System-level wireless validation</li>
           </ul>
-
-          <h4>Key design decisions</h4>
-          <ul class="drv-bullets">
-            <li>Implemented the 555 using discrete BJTs rather than an integrated timer IC</li>
-            <li>Used LTspice before fabrication to de-risk switching and timing behavior</li>
-            <li>Labeled board regions and I/O nodes for easier bench testing and instructional clarity</li>
+        </div>
+        <div class="skill-group">
+          <h3>Power Electronics</h3>
+          <ul>
+            <li>Power protection and monitoring</li>
+            <li>Energy harvesting power stages</li>
+            <li>Battery and current sensing pathways</li>
+            <li>High-current thermal-aware routing</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Simulation / Analysis</h3>
+          <ul>
+            <li>LTspice analog simulation</li>
+            <li>FEA workflow support</li>
+            <li>Electromagnetic and thermal iteration</li>
+            <li>Bench-to-simulation correlation</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>CAD / Software</h3>
+          <ul>
+            <li>KiCad</li>
+            <li>Arduino IDE</li>
+            <li>EMWorks / Elmer / FEMM / SimScale</li>
+            <li>Technical documentation and handoff</li>
           </ul>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card project-card drv-project-meta bq-project-meta">
-      <h3>BQ25570 Pendulum Energy Harvester PCB — Complete</h3>
-      <p class="project-subcaption">Configurable energy-harvesting PCB built to rectify multi-coil pendulum-generator inputs, manage low-power startup, and store harvested energy for experimental loads and sensing.</p>
-      <table aria-label="BQ25570 energy harvester project metadata">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Role</th>
-            <th>Tools</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Spring 2026</td>
-            <td>PCB Design Lead</td>
-            <td>KiCad, LTspice, BQ25570</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="drv-project-grid">
-        <div>
-          <h4>Problem / objective</h4>
-          <p>Create a compact board that interfaces multiple pendulum-generator coils, supports configurable series/parallel routing, and converts intermittent low-level AC energy into a usable storage/output path.</p>
-
-          <h4>Your contribution</h4>
-          <p>Owned the architecture, schematic capture, PCB layout, rectifier integration, BQ25570 power stage, connector mapping, component selection, and design iteration for the harvester platform.</p>
-
-          <h4>Design / implementation</h4>
-          <p>Organized six coil channels into a low-loss rectifier front end feeding a BQ25570 harvester stage, storage-capacitor footprint, and output headers. The layout prioritized accessible coil connectors, short power paths, and a test-friendly architecture for comparing coil combinations.</p>
-        </div>
-        <div>
-          <h4>Validation / results</h4>
-          <p>The design consolidated rectification, harvesting, storage, and output routing into a single PCB, reducing off-board wiring and creating a repeatable platform for pendulum-energy experiments and future supercapacitor/load testing.</p>
-
-          <h4>What this project proves</h4>
-          <ul class="drv-bullets">
-            <li>Analog/power PCB design for energy harvesting</li>
-            <li>Configurable multi-input rectifier architecture</li>
-            <li>Experimental hardware iteration and system integration</li>
-          </ul>
-
-          <h4>Key design decisions</h4>
-          <ul class="drv-bullets">
-            <li>Six-input coil interface for configurable routing tests</li>
-            <li>BQ25570-based harvester stage for low-power startup and storage control</li>
-            <li>Connector-first layout for rapid bench iteration</li>
-          </ul>
-        </div>
+    <section id="projects" class="card">
+      <div class="section-header">
+        <h2>Project Portfolio</h2>
+        <p>Homepage summaries are intentionally concise; each project links to a full case study.</p>
       </div>
-    </div>
 
-    <div class="card project-card drv-project-meta">
-      <h3>DRV Power Protection &amp; Monitoring PCB — Complete</h3>
-      <p class="project-subcaption">Custom 4-layer inline board built to improve protection, sensing access, and serviceability for 8S DRV motor-control bring-up and fault-isolation workflows.</p>
-      <table aria-label="DRV power protection and monitoring project metadata">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Role</th>
-            <th>Tools</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Spring 2026</td>
-            <td>Power / PCB Designer</td>
-            <td>KiCad, 4-Layer PCB, Bench Validation</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="drv-project-grid">
+      <div class="project-list">
+        <article class="project-summary">
+          <img src="TCP Image 2.PNG" alt="Caladrius UAV engineering image" loading="lazy" />
+          <div>
+            <h3>The Caladrius Project (HAVOC-03)</h3>
+            <div class="meta-chips">
+              <span>Date: May-Nov 2025</span><span>Role: Engineering Project Manager Intern</span><span>Team: 25 members</span><span>Duration: 10 weeks</span><span>Status: Complete</span>
+            </div>
+            <p class="opening">Built a long-endurance fixed-wing UAV to rapidly field a modular, mission-adaptable platform during a compressed RDT&amp;E schedule.</p>
+            <ul>
+              <li>Led interdisciplinary technical coordination across mechanical, avionics, and autonomy workstreams.</li>
+              <li>Contributed CAD and FEA-informed design decisions for structural and system integration.</li>
+              <li>Delivered a flight-ready platform suitable for iterative mission profile development.</li>
+            </ul>
+            <a class="text-link" href="projects/caladrius.html">View Project Details →</a>
+          </div>
+        </article>
+
+        <article class="project-summary">
+          <img src="STM32 BT 3D PCB.png" alt="ESP32 stackable module render" loading="lazy" />
+          <div>
+            <h3>Stackable ESP32 RF Communication Module for ESC Systems</h3>
+            <div class="meta-chips">
+              <span>Date: Spring 2026</span><span>Role: PCB Design Lead</span><span>Tools: KiCad, ESP32, Arduino IDE</span><span>Wireless: Enabled</span><span>Status: Complete</span>
+            </div>
+            <p class="opening">Designed and built a stackable ESP32 PCB that solved wireless control and expansion limitations in an ESC senior-design platform.</p>
+            <ul>
+              <li>Completed schematic capture, layout, assembly, firmware bring-up, and board-level debugging.</li>
+              <li>Integrated joystick control and board-to-board communication interfaces.</li>
+              <li>Recovered routing issues through targeted rework and validation testing.</li>
+            </ul>
+            <a class="text-link" href="projects/esp32-rf-module.html">View Project Details →</a>
+          </div>
+        </article>
+
+        <article class="project-summary">
+          <img src="STM32 BT Schematic.png" alt="Discrete 555 timer schematic representation" loading="lazy" />
+          <div>
+            <h3>Discrete Analog BJT-Based 555 Timer</h3>
+            <div class="meta-chips">
+              <span>Date: Spring 2026</span><span>Role: Analog / PCB Designer</span><span>Tools: KiCad, LTspice</span><span>Board Type: Through-hole prototype</span><span>Status: Complete</span>
+            </div>
+            <p class="opening">Implemented a discrete transistor-level 555 timer to validate analog timing behavior without relying on an integrated timer IC.</p>
+            <ul>
+              <li>Designed comparator, flip-flop, output, reset, and discharge stages with discrete BJTs.</li>
+              <li>Performed LTspice simulation before fabrication to de-risk switching/timing behavior.</li>
+              <li>Assembled and validated a complete teaching and test platform for analog fundamentals.</li>
+            </ul>
+            <a class="text-link" href="projects/discrete-555-timer.html">View Project Details →</a>
+          </div>
+        </article>
+
+        <article class="project-summary">
+          <img src="TCP Image 5.jpg" alt="Energy harvesting hardware image" loading="lazy" />
+          <div>
+            <h3>BQ25570 Pendulum Energy Harvester PCB</h3>
+            <div class="meta-chips">
+              <span>Date: Spring 2026</span><span>Role: PCB Design Lead</span><span>Tools: KiCad, LTspice, BQ25570</span><span>Inputs: 6 coil channels</span><span>Status: Complete</span>
+            </div>
+            <p class="opening">Developed a configurable energy-harvesting PCB to convert low-level, intermittent multi-coil AC input into a usable storage/output pathway.</p>
+            <ul>
+              <li>Integrated rectification, harvesting, storage, and output routing into one board.</li>
+              <li>Enabled series/parallel channel experimentation with connectorized input architecture.</li>
+              <li>Created a repeatable bench platform for future load and supercapacitor testing.</li>
+            </ul>
+            <a class="text-link" href="projects/bq25570-harvester.html">View Project Details →</a>
+          </div>
+        </article>
+
+        <article class="project-summary">
+          <img src="TCP Image 4.jpg" alt="Power protection board development image" loading="lazy" />
+          <div>
+            <h3>DRV Power Protection &amp; Monitoring PCB</h3>
+            <div class="meta-chips">
+              <span>Date: Spring 2026</span><span>Role: Power / PCB Designer</span><span>Tools: KiCad, Bench Validation</span><span>Board: 4-layer inline</span><span>Status: Complete</span>
+            </div>
+            <p class="opening">Engineered an inline 4-layer board that solved protection and sensing-access bottlenecks during high-current DRV motor-control bring-up.</p>
+            <ul>
+              <li>Architected connectorized battery, current, and temperature monitoring points.</li>
+              <li>Separated thermal/high-current regions to improve bench reliability.</li>
+              <li>Reduced ad-hoc wiring and improved repeatability for debug and fault isolation.</li>
+            </ul>
+            <a class="text-link" href="projects/drv-power-protection.html">View Project Details →</a>
+          </div>
+        </article>
+
+        <article class="project-summary">
+          <img src="TCP Image 6.jpg" alt="Axial flux motor concept image" loading="lazy" />
+          <div>
+            <h3>Multi-Rotor Axial Flux Motor</h3>
+            <div class="meta-chips">
+              <span>Date: 2026-Present</span><span>Role: Electrical Engineer</span><span>Tools: EMWorks, Elmer, FEMM, SimScale</span><span>Prototype Status: In progress</span><span>Test Status: [Add latest data]</span>
+            </div>
+            <p class="opening">Developing a multi-rotor axial-flux architecture to improve torque density and efficiency for EV and UAV propulsion use cases.</p>
+            <ul>
+              <li>Conducting electromagnetic and thermal simulation-driven design iteration.</li>
+              <li>Evaluating rotor-stator geometry for performance and scalability.</li>
+              <li>Preparing design checkpoints for hardware validation planning.</li>
+            </ul>
+            <a class="text-link" href="projects/axial-flux-motor.html">View Project Details →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="card recruiter-cta">
+      <h2>Interested in my hardware engineering work?</h2>
+      <p>I am actively pursuing full-time electrical engineering opportunities in electronics hardware, PCB design, avionics, embedded systems, RF/wireless, and power electronics.</p>
+      <div class="hero-ctas">
+        <a class="button button-primary" href="Resume_July2025.pdf" target="_blank">View Resume</a>
+        <a class="button button-secondary" href="#contact">Contact Jon</a>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>I am a U.S. Army veteran and senior-year electrical engineering candidate focused on building reliable, testable electronics for aerospace and high-performance systems.</p>
+      <p>My background combines mission-driven discipline from MQ-1C UAS operations with hands-on hardware development across avionics, RF modules, embedded boards, and power electronics prototypes.</p>
+      <details>
+        <summary>Read More: Military-to-Engineering Transition</summary>
+        <p>I served as an MQ-1C Gray Eagle operator, where mission outcomes depended on technical reliability, team coordination, and operational discipline. That experience pushed me to understand the engineering behind the systems I trusted in the field.</p>
+        <p>After military service, I transitioned into electrical engineering and committed to practical hardware work: schematic capture, PCB layout, simulation, bring-up, rework, and test. I am now focused on applying that experience in a full-time engineering role.</p>
+      </details>
+    </section>
+
+    <section id="timeline" class="card">
+      <h2>Career Timeline</h2>
+      <div class="timeline-columns">
         <div>
-          <h4>Problem / objective</h4>
-          <p>Create a reusable inline board for DRV motor-control systems that improves power-path protection, exposes sensing nodes, and speeds bring-up/debug without repeatedly reworking the main controller board.</p>
-
-          <h4>Your contribution</h4>
-          <p>Owned system architecture, schematic capture, 4-layer PCB layout, connector and sense-path planning, and bench-oriented design choices focused on serviceability and rapid fault isolation.</p>
-
-          <h4>Design / implementation</h4>
-          <p>Implemented an inline architecture with connectorized battery/current/temperature monitoring points, high-current routing with thermal-aware region separation, and structured access to critical nodes for repeatable diagnostics.</p>
-
-          <h4>Validation / results</h4>
-          <p>The board established a service-oriented hardware layer for DRV testing workflows, reducing ad-hoc wiring and improving repeatability during bench validation and protection troubleshooting.</p>
+          <h3>Confirmed Experience</h3>
+          <ul class="timeline-list">
+            <li><strong>2016-2022:</strong> MQ-1C UAS Operator, U.S. Army</li>
+            <li><strong>2022-2023:</strong> GPR Analyst, Penhall Technologies</li>
+            <li><strong>2023-Present:</strong> Electrical Engineer, Flux Speed Inc.</li>
+            <li><strong>2023-Present:</strong> UAS Advisor, American Tenet Inc.</li>
+            <li><strong>May 2025-Nov 2025:</strong> Engineering Project Manager Intern, American Tenet Inc. (HAVOC-03)</li>
+          </ul>
         </div>
         <div>
-          <h4>What this project proves</h4>
-          <ul class="drv-bullets">
-            <li>Power electronics protection and monitoring design</li>
-            <li>4-layer high-current PCB layout and thermal planning</li>
-            <li>Bench-serviceable architecture for faster debug cycles</li>
-          </ul>
-
-          <h4>Project highlights</h4>
-          <ul class="drv-bullets">
-            <li>4-layer inline board architecture</li>
-            <li>Up to 8S lithium system support</li>
-            <li>Connectorized sensing and fault-isolation points</li>
-          </ul>
-
-          <h4>Key design decisions</h4>
-          <ul class="drv-bullets">
-            <li>Inline form factor to preserve the main controller while adding test/protection capability</li>
-            <li>Connector-first sensing layout for battery, current, and temperature access</li>
-            <li>Thermal-separated high-current routing to improve reliability during high-load testing</li>
+          <h3>Next Steps (Planned)</h3>
+          <ul class="timeline-list">
+            <li><strong>2026:</strong> Continue expanding embedded, RF, and power-electronics project depth.</li>
+            <li><strong>2027 (Target):</strong> Complete B.S. in Electrical Engineering, California State University, Long Beach.</li>
+            <li><strong>Near Term:</strong> Begin full-time role in electronics hardware, PCB, avionics, or embedded systems engineering.</li>
           </ul>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card project-card">
-      <h3>Multi-Rotor Axial Flux Motor — In Progress</h3>
-      <p>Collaborating on a high-torque, high-efficiency axial flux motor architecture for EV and UAV propulsion. Work includes iterative electromagnetic and thermal simulation (EMWorks, Elmer, FEMM, SimScale), rotor-stator optimization, and validation of scalable multi-rotor geometry for improved power density.</p>
-    </div>
+    <section id="resume" class="card">
+      <h2>Resume</h2>
+      <p>Download or review my current resume below.</p>
+      <a href="Resume_July2025.pdf" target="_blank" class="button button-primary">Download Resume (PDF)</a>
+      <iframe src="Resume_July2025.pdf" width="100%" height="600" style="border:none; margin-top:1rem;" title="Jon Tolden Resume"></iframe>
+    </section>
 
-  </section>
+    <section id="contact" class="card contact-box">
+      <h2>Contact</h2>
+      <p class="contact-priority"><strong>Actively seeking full-time electrical engineering roles</strong> in electronics hardware, PCB design, avionics, embedded systems, RF/wireless systems, and power electronics.</p>
+      <p><strong>Email:</strong> <a href="mailto:jon.a.tolden@gmail.com">jon.a.tolden@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+17142932180">(714) 293-2180</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jontolden" target="_blank">linkedin.com/in/jontolden</a></p>
+      <p><strong>Location:</strong> Long Beach, CA (Pacific Time)</p>
+      <p class="secondary-interest"><strong>Secondary availability:</strong> UAS advisory, consulting, and freelance PCB support engagements.</p>
+    </section>
+  </main>
 
-<!-- Career timeline -->
-<section id="timeline-graphic" class="card" data-aos="fade-up">
-  <h2>Career Timeline</h2>
-  <div class="timeline-v2">
-
-    <div class="timeline-v2-item left" data-aos="fade-right">
-      <div class="content">
-        <img src="assets/images/timeline_2012.jpg" alt="">
-        <div class="text-block">
-          <h3>2016-2022</h3>
-          <h4>MQ-1C UAS Operator - U.S. Army</h4>
-          <p>Piloted the MQ-1C Gray Eagle Unmanned Aircraft System with deployments in support of Operation Freedom's Sentinel and Operation Inherent Resolve</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-v2-item right" data-aos="fade-left">
-      <div class="content">
-        <img src="assets/images/timeline_2018.jpg" alt="">
-        <div class="text-block">
-          <h3>2022-2023</h3>
-          <h4>GPR Analyst - Penhall Technologies</h4>
-          <p>3D Mapped utilities using Ground Penetrating Radar and Industrial X-Ray</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-v2-item left" data-aos="fade-left">
-      <div class="content">
-        <img src="assets/images/timeline_2021.jpg" alt="">
-        <div class="text-block">
-          <h3>2023-Present</h3>
-          <h4>Electrical Engineer - Flux Speed Inc.</h4>
-          <p>Conducts Computational Electromagnetic FEA and ESC PCB R&D for multi-rotor multi-stator axial flux electric motor applications</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="timeline-v2-item right" data-aos="fade-left">
-      <div class="content">
-        <img src="assets/images/timeline_2021.jpg" alt="">
-        <div class="text-block">
-          <h3>2023-Present</h3>
-          <h4>UAS Advisor - American Tenet Inc.</h4>
-          <p>Serves as a board advisor on unmanned integration, techonological solutions and system design</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-v2-item left" data-aos="fade-left">
-      <div class="content">
-        <img src="assets/images/timeline_2023.jpg" alt="">
-        <div class="text-block">
-          <h3>May 2025 - Nov 2025</h3>
-          <h4>Engineering Project Manager Intern - American Tenet Inc.</h4>
-          <p>Led a 20-member engineering intern team through the RDT&amp;E of HAVOC-03, delivering a flight-ready long-endurance UAV in 10 weeks</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-v2-item right" data-aos="fade-right">
-      <div class="content">
-        <img src="assets/images/timeline_2025.jpg" alt="">
-        <div class="text-block">
-          <h3>Projected Summer 2026</h3>
-          <h4>Avionics Engineering Intern - Castelion</h4>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-v2-item left" data-aos="fade-right">
-      <div class="content">
-        <img src="assets/images/timeline_2025.jpg" alt="">
-        <div class="text-block">
-          <h3>Projected 2027</h3>
-          <h4>Electrical Engineering - California State University, Long Beach</h4>
-          <p>Completing a B.S. in Electrical Engineering with focus on electronics and power</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Resume embedded PDF -->
-<section id="resume" class="card" data-aos="fade-up">
-  <h2>Resume</h2>
-  <p>You can view or download my resume here:</p>
-  <a href="Resume_July2025.pdf" target="_blank" class="button">Download Resume (PDF)</a>
-  <br><br>
-  <iframe src="Resume_July2025.pdf" width="100%" height="600" style="border:none;"></iframe>
-</section>
-
-<!-- Contact information -->
-<section id="contact" class="card contact-box" data-aos="fade-up">
-  <h2 data-aos="fade-up" data-aos-delay="100">Contact</h2>
-
-  <p data-aos="fade-up" data-aos-delay="200">
-    <strong class="highlight">Email:</strong> <a href="mailto:jon.a.tolden@gmail.com">jon.a.tolden@gmail.com</a>
-  </p>
-
-  <p data-aos="fade-up" data-aos-delay="300">
-    <strong class="highlight">Phone:</strong> <a href="tel:+17142932180">(714) 293-2180</a>
-  </p>
-
-  <p data-aos="fade-up" data-aos-delay="400">
-    <strong class="highlight">LinkedIn:</strong> <a href="https://linkedin.com/in/jontolden" target="_blank">linkedin.com/in/jontolden</a>
-  </p>
-
-  <p data-aos="fade-up" data-aos-delay="500">Location: Long Beach, CA (Pacific Time Zone)</p>
-  <p data-aos="fade-up" data-aos-delay="600">
-    Open to: Full Time Employment, UAS Consulting, and Freelance PCB Design Work
-  </p>
-
-  <div style="margin-top: 1rem;" data-aos="fade-up" data-aos-delay="700">
-    <a href="https://linkedin.com/in/jontolden" target="_blank" title="LinkedIn" style="margin-right: 1rem;">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" width="24" alt="LinkedIn" />
-    </a>
-    <a href="mailto:jon.a.tolden@gmail.com" title="Email">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" width="24" alt="Email" />
-    </a>
-  </div>
-</section>
-
-<!-- Footer with copyright -->
-<footer data-aos="fade-up">
-  <p>© 2025 Jon Tolden | Thank you for visiting my page!</p>
-</footer>
-
-<!-- Intersection observer for scroll animations -->
-<script>
-
-  // Scroll animation
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add("visible");
-        }, index * 150);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.card').forEach(el => observer.observe(el));
-
-  // Parallax effect for header background
-  const hero = document.querySelector('header');
-  window.addEventListener('scroll', () => {
-    hero.style.backgroundPositionY = `${window.scrollY * 0.5}px`;
-  });
-</script>
-
-<!-- Custom cursor elements -->
-<div class="cursor"></div>
-<div class="cursor-follower"></div>
-<!-- Cursor movement script -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const cursor = document.querySelector('.cursor');
-    const follower = document.querySelector('.cursor-follower');
-    let x = 0, y = 0;
-    let fx = 0, fy = 0;
-    document.addEventListener('mousemove', e => {
-      x = e.clientX;
-      y = e.clientY;
-      cursor.style.transform = `translate(${x}px, ${y}px)`;
-    });
-    function loop() {
-      fx += (x - fx) / 8;
-      fy += (y - fy) / 8;
-      follower.style.transform = `translate(${fx}px, ${fy}px)`;
-      requestAnimationFrame(loop);
-    }
-    loop();
-  });
-</script>
-
+  <footer>
+    <p>© 2026 Jon Tolden | Electrical Engineering Portfolio</p>
+  </footer>
 </body>
 </html>
